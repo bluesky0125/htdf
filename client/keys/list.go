@@ -1,7 +1,7 @@
 package keys
 
 import (
-	"github.com/orientwalt/htdf/client"
+	"github.com/deep2chain/htdf/client"
 	"github.com/spf13/cobra"
 )
 

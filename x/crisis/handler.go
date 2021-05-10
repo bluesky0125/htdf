@@ -1,7 +1,7 @@
 package crisis
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // ModuleName is the module name for this module

@@ -4,7 +4,7 @@ import (
 	amino "github.com/tendermint/go-amino"
 	cryptoAmino "github.com/tendermint/tendermint/crypto/encoding/amino"
 
-	"github.com/orientwalt/htdf/crypto/keys/hd"
+	"github.com/deep2chain/htdf/crypto/keys/hd"
 )
 
 var cdc = amino.NewCodec()

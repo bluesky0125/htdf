@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/types"
 )
 
 /*

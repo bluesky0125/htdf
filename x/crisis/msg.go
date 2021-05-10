@@ -1,7 +1,7 @@
 package crisis
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // MsgVerifyInvariant - message struct to verify a particular invariance

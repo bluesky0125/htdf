@@ -10,11 +10,11 @@ import (
 	"github.com/tendermint/tendermint/libs/log"
 	tmtime "github.com/tendermint/tendermint/types/time"
 
-	codec "github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/store"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
-	"github.com/orientwalt/htdf/x/params"
+	codec "github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/store"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
+	"github.com/deep2chain/htdf/x/params"
 )
 
 type testInput struct {

@@ -3,9 +3,9 @@ package rest
 import (
 	"github.com/gorilla/mux"
 
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/crypto/keys"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/crypto/keys"
 )
 
 // RegisterRoutes registers staking-related REST handlers to a router

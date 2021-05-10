@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	v2auth "github.com/orientwalt/htdf/app/v2/auth"
-	"github.com/orientwalt/htdf/params"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
+	v2auth "github.com/deep2chain/htdf/app/v2/auth"
+	"github.com/deep2chain/htdf/params"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
 	"github.com/tendermint/tendermint/crypto"
 )
 

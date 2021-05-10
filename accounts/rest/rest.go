@@ -2,9 +2,9 @@ package rest
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/codec"
-	svrConfig "github.com/orientwalt/htdf/server/config"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/codec"
+	svrConfig "github.com/deep2chain/htdf/server/config"
 )
 
 const (

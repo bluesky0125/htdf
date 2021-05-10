@@ -3,11 +3,11 @@ package gov
 import (
 	"time"
 
-	codec "github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/params"
+	codec "github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/params"
 
-	"github.com/orientwalt/htdf/x/guardian"
+	"github.com/deep2chain/htdf/x/guardian"
 	"github.com/tendermint/tendermint/crypto"
 )
 

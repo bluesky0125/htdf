@@ -8,9 +8,9 @@ import (
 	"github.com/tendermint/tendermint/crypto"
 	"github.com/tendermint/tendermint/crypto/ed25519"
 
-	"github.com/orientwalt/htdf/crypto/keys/hd"
-	"github.com/orientwalt/htdf/tests"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/crypto/keys/hd"
+	"github.com/deep2chain/htdf/tests"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 func TestNew(t *testing.T) {

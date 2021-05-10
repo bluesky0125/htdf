@@ -7,12 +7,12 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	distr "github.com/orientwalt/htdf/x/distribution"
-	"github.com/orientwalt/htdf/x/distribution/client/common"
-	"github.com/orientwalt/htdf/x/distribution/types"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	distr "github.com/deep2chain/htdf/x/distribution"
+	"github.com/deep2chain/htdf/x/distribution/client/common"
+	"github.com/deep2chain/htdf/x/distribution/types"
 )
 
 // GetCmdQueryParams implements the query params command.

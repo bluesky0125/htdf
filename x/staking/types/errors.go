@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 type CodeType = sdk.CodeType

@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/distribution/types"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/distribution/types"
 )
 
 // get the delegator withdraw address, defaulting to the delegator address

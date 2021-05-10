@@ -5,7 +5,7 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // allocate fees handles distribution of the collected fees

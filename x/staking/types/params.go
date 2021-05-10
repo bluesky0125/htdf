@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/params"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/params"
 )
 
 const (
@@ -17,7 +17,7 @@ const (
 	// DefaultUnbondingTime reflects three weeks in seconds as the default
 	// unbonding time.
 	// TODO: Justify our choice of default here.
-	DefaultUnbondingTime time.Duration = time.Second * 60 * 60 * 24 * 14 // 3 to 7,junying-todo, 2019-11-20
+	DefaultUnbondingTime time.Duration = time.Second * 60 * 60 * 24 * 3 // 3 to 7,junying-todo, 2019-11-20
 
 	// Default maximum number of bonded validators
 	DefaultMaxValidators uint16 = 50

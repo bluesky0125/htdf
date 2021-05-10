@@ -3,9 +3,9 @@ package mock
 import (
 	"testing"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
-	htdfservice "github.com/orientwalt/htdf/x/core"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
+	htdfservice "github.com/deep2chain/htdf/x/core"
 	abci "github.com/tendermint/tendermint/abci/types"
 )
 

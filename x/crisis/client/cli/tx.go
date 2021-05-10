@@ -4,12 +4,12 @@ package cli
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/client/utils"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	authtxb "github.com/orientwalt/htdf/x/auth/client/txbuilder"
-	"github.com/orientwalt/htdf/x/crisis"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/client/utils"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	authtxb "github.com/deep2chain/htdf/x/auth/client/txbuilder"
+	"github.com/deep2chain/htdf/x/crisis"
 )
 
 // command to replace a delegator's withdrawal address

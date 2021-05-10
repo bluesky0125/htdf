@@ -3,8 +3,8 @@ package context
 import (
 	"fmt"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
 
 	"github.com/pkg/errors"
 
@@ -18,7 +18,7 @@ import (
 	rpcclient "github.com/tendermint/tendermint/rpc/client"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/orientwalt/htdf/store/rootmulti"
+	"github.com/deep2chain/htdf/store/rootmulti"
 )
 
 // GetNode returns an RPC client. If the context's client is not defined, an

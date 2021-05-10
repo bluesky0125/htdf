@@ -9,9 +9,9 @@ import (
 	"github.com/pkg/errors"
 
 	"github.com/cosmos/go-bip39"
-	"github.com/orientwalt/htdf/crypto/keys/hd"
-	"github.com/orientwalt/htdf/tests"
-	"github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/crypto/keys/hd"
+	"github.com/deep2chain/htdf/tests"
+	"github.com/deep2chain/htdf/types"
 
 	secp256k1 "github.com/tendermint/btcd/btcec"
 	"github.com/tendermint/tendermint/crypto"

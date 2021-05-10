@@ -1,6 +1,6 @@
 package gov
 
-import sdk "github.com/orientwalt/htdf/types"
+import sdk "github.com/deep2chain/htdf/types"
 
 var _ ProposalContent = (*SoftwareUpgradeProposal)(nil)
 

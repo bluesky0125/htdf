@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // Pool - tracking bonded and not-bonded token supply of the bond denomination

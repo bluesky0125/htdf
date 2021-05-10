@@ -4,17 +4,17 @@ import (
 	"testing"
 	"os"
 
-	stake "github.com/orientwalt/htdf/x/staking"
+	stake "github.com/deep2chain/htdf/x/staking"
 	"github.com/stretchr/testify/require"
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 	dbm "github.com/tendermint/tendermint/libs/db"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/log"
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/x/auth"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/x/auth"
 	"github.com/tendermint/tendermint/crypto"
 	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/orientwalt/htdf/store"
+	"github.com/deep2chain/htdf/store"
 	"encoding/hex"
 )
 

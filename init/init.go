@@ -12,10 +12,10 @@ import (
 	"github.com/tendermint/tendermint/libs/cli"
 	"github.com/tendermint/tendermint/libs/common"
 
-	"github.com/orientwalt/htdf/app"
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/server"
+	"github.com/deep2chain/htdf/app"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/server"
 )
 
 const (

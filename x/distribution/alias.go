@@ -2,9 +2,9 @@
 package distribution
 
 import (
-	"github.com/orientwalt/htdf/x/distribution/keeper"
-	"github.com/orientwalt/htdf/x/distribution/tags"
-	"github.com/orientwalt/htdf/x/distribution/types"
+	"github.com/deep2chain/htdf/x/distribution/keeper"
+	"github.com/deep2chain/htdf/x/distribution/tags"
+	"github.com/deep2chain/htdf/x/distribution/types"
 )
 
 type (

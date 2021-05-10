@@ -6,12 +6,12 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/client/rpc"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/types/rest"
-	"github.com/orientwalt/htdf/x/slashing"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/client/rpc"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/types/rest"
+	"github.com/deep2chain/htdf/x/slashing"
 )
 
 func registerQueryRoutes(cliCtx context.CLIContext, r *mux.Router, cdc *codec.Codec) {

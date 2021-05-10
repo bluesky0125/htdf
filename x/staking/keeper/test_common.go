@@ -16,13 +16,13 @@ import (
 	"github.com/tendermint/tendermint/libs/log"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/store"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
-	"github.com/orientwalt/htdf/x/bank"
-	"github.com/orientwalt/htdf/x/params"
-	"github.com/orientwalt/htdf/x/staking/types"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/store"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
+	"github.com/deep2chain/htdf/x/bank"
+	"github.com/deep2chain/htdf/x/params"
+	"github.com/deep2chain/htdf/x/staking/types"
 )
 
 // dummy addresses used for testing

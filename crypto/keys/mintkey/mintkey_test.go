@@ -3,8 +3,8 @@ package mintkey_test
 import (
 	"testing"
 
-	"github.com/orientwalt/htdf/crypto/keys"
-	"github.com/orientwalt/htdf/crypto/keys/mintkey"
+	"github.com/deep2chain/htdf/crypto/keys"
+	"github.com/deep2chain/htdf/crypto/keys/mintkey"
 	"github.com/stretchr/testify/require"
 	cryptoAmino "github.com/tendermint/tendermint/crypto/encoding/amino"
 	"github.com/tendermint/tendermint/crypto/secp256k1"

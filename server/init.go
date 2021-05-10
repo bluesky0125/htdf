@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/orientwalt/htdf/crypto/keys"
+	"github.com/deep2chain/htdf/crypto/keys"
 
-	"github.com/orientwalt/htdf/accounts/keystore"
-	clkeys "github.com/orientwalt/htdf/client/keys"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/accounts/keystore"
+	clkeys "github.com/deep2chain/htdf/client/keys"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // GenerateCoinKey returns the address of a public key, along with the secret

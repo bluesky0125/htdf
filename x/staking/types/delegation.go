@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // DVPair is struct that just has a delegator-validator pair with no other data.

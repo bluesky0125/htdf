@@ -4,16 +4,16 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/types/rest"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/types/rest"
 
-	svrConfig "github.com/orientwalt/htdf/server/config"
+	svrConfig "github.com/deep2chain/htdf/server/config"
 
 	"github.com/gorilla/mux"
-	"github.com/orientwalt/htdf/x/auth"
-	htdfservice "github.com/orientwalt/htdf/x/core"
+	"github.com/deep2chain/htdf/x/auth"
+	htdfservice "github.com/deep2chain/htdf/x/core"
 )
 
 const (

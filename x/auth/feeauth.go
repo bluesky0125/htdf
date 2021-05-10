@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/orientwalt/htdf/types"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 type FeeAuth struct {

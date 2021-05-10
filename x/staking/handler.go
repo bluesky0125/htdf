@@ -8,10 +8,10 @@ import (
 	"github.com/tendermint/tendermint/libs/common"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/staking/keeper"
-	"github.com/orientwalt/htdf/x/staking/tags"
-	"github.com/orientwalt/htdf/x/staking/types"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/staking/keeper"
+	"github.com/deep2chain/htdf/x/staking/tags"
+	"github.com/deep2chain/htdf/x/staking/types"
 )
 
 func NewHandler(k keeper.Keeper) sdk.Handler {

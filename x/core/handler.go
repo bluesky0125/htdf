@@ -8,12 +8,12 @@ import (
 	"os"
 	"time"
 
-	vmcore "github.com/orientwalt/htdf/evm/core"
-	"github.com/orientwalt/htdf/evm/state"
-	"github.com/orientwalt/htdf/evm/vm"
-	appParams "github.com/orientwalt/htdf/params"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
+	vmcore "github.com/deep2chain/htdf/evm/core"
+	"github.com/deep2chain/htdf/evm/state"
+	"github.com/deep2chain/htdf/evm/vm"
+	appParams "github.com/deep2chain/htdf/params"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -200,7 +200,16 @@ func HandleOpenContract(ctx sdk.Context,
 	// 2. create receiver account if no exists
 	// 3. execute contract & calculate gas
 	log.Debugln(" HandleOpenContract1:ctx.GasMeter().GasConsumed()", ctx.GasMeter().GasConsumed())
-	outputs, gasLeftover, err := evm.Call(contractRef, toAddress, inputCode, st.gas, transferAmount)
+	var outputs []byte
+	var gasLeftover uint64
+	if code := evm.StateDB.GetCode(toAddress); len(inputCode) > 0 && len(code) == 0 {
+		// added by yqq 2020-12-07
+		// To fix issue #14, we disable transaction which has a not empty `MsgSend.Data`
+		// and `MsgSend.To` is not contract address.
+		outputs, gasLeftover, err = nil, 0, fmt.Errorf("invalid contract address")
+	} else {
+		outputs, gasLeftover, err = evm.Call(contractRef, toAddress, inputCode, st.GetGas(), transferAmount)
+	}
 	log.Debugln(" HandleOpenContract2:ctx.GasMeter().GasConsumed()", ctx.GasMeter().GasConsumed())
 	if err != nil {
 		log.Debugf("evm call error|err=%s\n", err)
@@ -208,7 +217,7 @@ func HandleOpenContract(ctx sdk.Context,
 		gasUsed = msg.GasWanted
 		evmOutput = fmt.Sprintf("evm call error|err=%s\n", err)
 	} else {
-		st.gas = gasLeftover
+		st.SetGas(gasLeftover)
 		// junying-todo, 2019-08-22
 		// refund(add) remaining to sender
 		st.RefundGas()

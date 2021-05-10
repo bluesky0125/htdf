@@ -1,7 +1,7 @@
 package slashing
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // GenesisState - all slashing state that must be provided at genesis

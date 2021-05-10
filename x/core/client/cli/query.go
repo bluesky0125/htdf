@@ -3,11 +3,11 @@ package cli
 import (
 	"fmt"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	htdfservice "github.com/orientwalt/htdf/x/core"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	htdfservice "github.com/deep2chain/htdf/x/core"
 	"github.com/spf13/cobra"
 )
 

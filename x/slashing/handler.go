@@ -1,8 +1,8 @@
 package slashing
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/slashing/tags"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/slashing/tags"
 )
 
 func NewHandler(k Keeper) sdk.Handler {

@@ -3,8 +3,8 @@ package distribution
 import (
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/distribution/keeper"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/distribution/keeper"
 )
 
 // set the proposer for determining distribution during endblock

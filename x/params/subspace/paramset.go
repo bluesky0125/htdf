@@ -1,8 +1,8 @@
 package subspace
 
 import (
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // Used for associating paramsubspace key and field of param structs

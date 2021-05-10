@@ -1,8 +1,8 @@
 package cli
 
 import (
-	"github.com/orientwalt/htdf/accounts/keystore"
-	"github.com/orientwalt/htdf/client"
+	"github.com/deep2chain/htdf/accounts/keystore"
+	"github.com/deep2chain/htdf/client"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"fmt"

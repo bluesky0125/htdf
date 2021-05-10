@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/tools/protoidl"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/bank"
-	"github.com/orientwalt/htdf/x/guardian"
-	"github.com/orientwalt/htdf/x/params"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/tools/protoidl"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/bank"
+	"github.com/deep2chain/htdf/x/guardian"
+	"github.com/deep2chain/htdf/x/params"
 	"github.com/tendermint/tendermint/crypto"
 )
 

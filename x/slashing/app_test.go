@@ -7,12 +7,12 @@ import (
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/crypto/secp256k1"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
-	"github.com/orientwalt/htdf/x/bank"
-	"github.com/orientwalt/htdf/x/mock"
-	"github.com/orientwalt/htdf/x/staking"
-	stakekeeper "github.com/orientwalt/htdf/x/staking/keeper"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
+	"github.com/deep2chain/htdf/x/bank"
+	"github.com/deep2chain/htdf/x/mock"
+	"github.com/deep2chain/htdf/x/staking"
+	stakekeeper "github.com/deep2chain/htdf/x/staking/keeper"
 )
 
 var (

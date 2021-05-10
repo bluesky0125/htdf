@@ -7,7 +7,7 @@ import (
 	bip39 "github.com/bartekn/go-bip39"
 	"github.com/spf13/cobra"
 
-	"github.com/orientwalt/htdf/client"
+	"github.com/deep2chain/htdf/client"
 )
 
 const (

@@ -8,11 +8,11 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/gov"
-	gcutils "github.com/orientwalt/htdf/x/gov/client/utils"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/gov"
+	gcutils "github.com/deep2chain/htdf/x/gov/client/utils"
 )
 
 // GetCmdQueryProposal implements the query proposal command.

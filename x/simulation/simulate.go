@@ -13,8 +13,8 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/orientwalt/htdf/app"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/app"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // AppStateFn returns the app state json bytes, the genesis accounts, and the chain identifier

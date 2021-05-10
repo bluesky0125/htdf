@@ -5,11 +5,11 @@ import (
 
 	"path/filepath"
 
-	"github.com/orientwalt/htdf/accounts"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
+	"github.com/deep2chain/htdf/accounts"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
 
-	authtxb "github.com/orientwalt/htdf/x/auth/client/txbuilder"
+	authtxb "github.com/deep2chain/htdf/x/auth/client/txbuilder"
 	"github.com/spf13/viper"
 	"github.com/tendermint/tmlibs/cli"
 )

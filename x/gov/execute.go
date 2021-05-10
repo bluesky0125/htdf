@@ -3,7 +3,7 @@ package gov
 import (
 	"fmt"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 func Execute(ctx sdk.Context, gk Keeper, p ProposalContent) (err error) {

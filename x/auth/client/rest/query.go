@@ -5,12 +5,12 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/types/rest"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/types/rest"
 
-	"github.com/orientwalt/htdf/x/auth"
+	"github.com/deep2chain/htdf/x/auth"
 )
 
 // register REST routes

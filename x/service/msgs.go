@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/orientwalt/htdf/tools/protoidl"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/tools/protoidl"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 const (

@@ -1,8 +1,8 @@
 package upgrade
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/version"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/version"
 )
 const defaultProtocolVersion = version.ProtocolVersion
 
@@ -24,20 +24,20 @@ func InitGenesis(ctx sdk.Context, k Keeper, data GenesisState) {
 // WriteGenesis - output genesis parameters
 func ExportGenesis(ctx sdk.Context) GenesisState {
 	return GenesisState{
-		NewVersionInfo(sdk.DefaultUpgradeConfig(defaultProtocolVersion, "https://github.com/orientwalt/htdf/releases/tag/v"+version.Version), true),
+		NewVersionInfo(sdk.DefaultUpgradeConfig(defaultProtocolVersion, "https://github.com/deep2chain/htdf/releases/tag/v"+version.Version), true),
 	}
 }
 
 // get raw genesis raw message for testing
 func DefaultGenesisState() GenesisState {
 	return GenesisState{
-		NewVersionInfo(sdk.DefaultUpgradeConfig(defaultProtocolVersion, "https://github.com/orientwalt/htdf/releases/tag/v"+version.Version), true),
+		NewVersionInfo(sdk.DefaultUpgradeConfig(defaultProtocolVersion, "https://github.com/deep2chain/htdf/releases/tag/v"+version.Version), true),
 	}
 }
 
 // get raw genesis raw message for testing
 func DefaultGenesisStateForTest() GenesisState {
 	return GenesisState{
-		NewVersionInfo(sdk.DefaultUpgradeConfig(defaultProtocolVersion, "https://github.com/orientwalt/htdf/releases/tag/v"+version.Version), true),
+		NewVersionInfo(sdk.DefaultUpgradeConfig(defaultProtocolVersion, "https://github.com/deep2chain/htdf/releases/tag/v"+version.Version), true),
 	}
 }

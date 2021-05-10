@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/mock"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/mock"
 )
 
 var (

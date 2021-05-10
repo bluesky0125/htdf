@@ -1,7 +1,7 @@
 package ibc
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 func NewHandler(ibcm Mapper, ck BankKeeper) sdk.Handler {

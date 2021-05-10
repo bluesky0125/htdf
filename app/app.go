@@ -9,24 +9,24 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/orientwalt/htdf/app/protocol"
+	"github.com/deep2chain/htdf/app/protocol"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
 	"github.com/tendermint/tendermint/libs/log"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/x/auth"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/x/auth"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 	dbm "github.com/tendermint/tendermint/libs/db"
 
-	v0 "github.com/orientwalt/htdf/app/v0"
-	v1 "github.com/orientwalt/htdf/app/v1"
-	v2 "github.com/orientwalt/htdf/app/v2"
-	"github.com/orientwalt/htdf/server"
+	v0 "github.com/deep2chain/htdf/app/v0"
+	// v1 "github.com/deep2chain/htdf/app/v1"
+	// v2 "github.com/deep2chain/htdf/app/v2"
+	"github.com/deep2chain/htdf/server"
 	cfg "github.com/tendermint/tendermint/config"
 	cmn "github.com/tendermint/tendermint/libs/common"
 )
@@ -110,9 +110,8 @@ func NewHtdfServiceApp(logger log.Logger, config *cfg.InstrumentationConfig, db 
 	//Change namespace to appName
 	appPrometheusConfig.Namespace = appPrometheusNamespace
 	engine.Add(v0.NewProtocolV0(0, logger, protocolKeeper, app.invCheckPeriod, &appPrometheusConfig))
-	engine.Add(v1.NewProtocolV1(1, logger, protocolKeeper, app.invCheckPeriod, &appPrometheusConfig))
-	engine.Add(v2.NewProtocolV2(2, logger, protocolKeeper, app.invCheckPeriod, &appPrometheusConfig))
-	//engine.Add(v2.NewProtocolV1(2, ...))
+	// engine.Add(v1.NewProtocolV1(1, logger, protocolKeeper, app.invCheckPeriod, &appPrometheusConfig))
+	// engine.Add(v2.NewProtocolV2(2, logger, protocolKeeper, app.invCheckPeriod, &appPrometheusConfig))
 	logrus.Traceln("KeyMain----->	", app.GetKVStore(protocol.KeyMain))
 	loaded, current := engine.LoadCurrentProtocol(app.GetKVStore(protocol.KeyMain))
 

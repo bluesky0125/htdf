@@ -3,8 +3,8 @@ package store
 import (
 	dbm "github.com/tendermint/tendermint/libs/db"
 
-	"github.com/orientwalt/htdf/store/rootmulti"
-	"github.com/orientwalt/htdf/store/types"
+	"github.com/deep2chain/htdf/store/rootmulti"
+	"github.com/deep2chain/htdf/store/types"
 )
 
 func NewCommitMultiStore(db dbm.DB) types.CommitMultiStore {

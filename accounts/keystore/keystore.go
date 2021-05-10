@@ -10,10 +10,10 @@ import (
 	"time"
 
 	bip39 "github.com/cosmos/go-bip39"
-	"github.com/orientwalt/htdf/accounts"
-	"github.com/orientwalt/htdf/crypto/keys/hd"
-	"github.com/orientwalt/htdf/crypto/keys/mintkey"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/accounts"
+	"github.com/deep2chain/htdf/crypto/keys/hd"
+	"github.com/deep2chain/htdf/crypto/keys/mintkey"
+	sdk "github.com/deep2chain/htdf/types"
 	"github.com/tendermint/tendermint/crypto/secp256k1"
 )
 

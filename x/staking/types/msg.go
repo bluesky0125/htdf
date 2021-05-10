@@ -6,7 +6,7 @@ import (
 
 	"github.com/tendermint/tendermint/crypto"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // ensure Msg interface compliance at compile time

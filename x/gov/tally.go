@@ -1,7 +1,7 @@
 package gov
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 type ProposalResult string

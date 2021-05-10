@@ -2,7 +2,7 @@ package bech32
 
 import (
 	"fmt"
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 	"github.com/spf13/cobra"
 )
 

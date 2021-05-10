@@ -10,10 +10,10 @@ import (
 
 	dbm "github.com/tendermint/tendermint/libs/db"
 
-	"github.com/orientwalt/htdf/store/dbadapter"
-	"github.com/orientwalt/htdf/store/prefix"
-	"github.com/orientwalt/htdf/store/tracekv"
-	"github.com/orientwalt/htdf/store/types"
+	"github.com/deep2chain/htdf/store/dbadapter"
+	"github.com/deep2chain/htdf/store/prefix"
+	"github.com/deep2chain/htdf/store/tracekv"
+	"github.com/deep2chain/htdf/store/types"
 )
 
 func bz(s string) []byte { return []byte(s) }

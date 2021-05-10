@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/orientwalt/htdf/client/keys"
-	"github.com/orientwalt/htdf/server"
+	"github.com/deep2chain/htdf/client/keys"
+	"github.com/deep2chain/htdf/server"
 )
 
 func TestGenerateCoinKey(t *testing.T) {

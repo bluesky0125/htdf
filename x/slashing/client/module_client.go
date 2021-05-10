@@ -4,10 +4,10 @@ import (
 	"github.com/spf13/cobra"
 	amino "github.com/tendermint/go-amino"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/x/slashing"
-	slashingcli "github.com/orientwalt/htdf/x/slashing/client/cli"
-	hslashingcli "github.com/orientwalt/htdf/x/slashing/client/cli"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/x/slashing"
+	slashingcli "github.com/deep2chain/htdf/x/slashing/client/cli"
+	hslashingcli "github.com/deep2chain/htdf/x/slashing/client/cli"
 )
 
 // ModuleClient exports all client functionality from this module

@@ -8,12 +8,12 @@ import (
 	"github.com/spf13/cobra"
 	amino "github.com/tendermint/go-amino"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/client/utils"
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/types/rest"
-	"github.com/orientwalt/htdf/x/auth"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/client/utils"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/types/rest"
+	"github.com/deep2chain/htdf/x/auth"
 )
 
 type (

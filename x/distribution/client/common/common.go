@@ -3,10 +3,10 @@ package common
 import (
 	"fmt"
 
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	distr "github.com/orientwalt/htdf/x/distribution"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	distr "github.com/deep2chain/htdf/x/distribution"
 )
 
 // QueryParams actually queries distribution params.

@@ -3,8 +3,8 @@ package config
 import (
 	"fmt"
 
-	"github.com/orientwalt/htdf/params"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/params"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 //

@@ -3,8 +3,8 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/orientwalt/htdf/types"
-	types "github.com/orientwalt/htdf/x/staking/types"
+	sdk "github.com/deep2chain/htdf/types"
+	types "github.com/deep2chain/htdf/x/staking/types"
 )
 
 const (

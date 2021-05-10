@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // the address for where distributions rewards are withdrawn to by default

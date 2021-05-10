@@ -3,10 +3,10 @@ package store
 // TODO: make it independent from list
 /*
 import (
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 
-	"github.com/orientwalt/htdf/store/list"
+	"github.com/deep2chain/htdf/store/list"
 )
 
 // Key for the top element position in the queue

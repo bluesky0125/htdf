@@ -3,8 +3,8 @@ package client
 import (
 	"fmt"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/upgrade"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/upgrade"
 )
 
 type UpgradeInfoOutput struct {

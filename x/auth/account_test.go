@@ -8,8 +8,8 @@ import (
 
 	tmtime "github.com/tendermint/tendermint/types/time"
 
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 var (

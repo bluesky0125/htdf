@@ -11,9 +11,9 @@ import (
 
 	ctypes "github.com/tendermint/tendermint/rpc/core/types"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/types/rest"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/types/rest"
 )
 
 // StatusCommand returns the status of the network

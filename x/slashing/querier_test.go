@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/require"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/orientwalt/htdf/codec"
+	"github.com/deep2chain/htdf/codec"
 )
 
 func TestNewQuerier(t *testing.T) {

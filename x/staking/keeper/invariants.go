@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"fmt"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
-	"github.com/orientwalt/htdf/x/staking/types"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
+	"github.com/deep2chain/htdf/x/staking/types"
 )
 
 // register all staking invariants

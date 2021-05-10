@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // ProposalContent is an interface that has title, description, and proposaltype

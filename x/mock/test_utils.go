@@ -5,12 +5,12 @@ import (
 	"math/rand"
 	"testing"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/crypto"
 	"github.com/stretchr/testify/require"
 
-	"github.com/orientwalt/htdf/x/mock/baseapp"
+	"github.com/deep2chain/htdf/x/mock/baseapp"
 )
 
 // BigInterval is a representation of the interval [lo, hi), where

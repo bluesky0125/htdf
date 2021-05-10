@@ -3,10 +3,10 @@ package params
 import (
 	"testing"
 
-	"github.com/orientwalt/htdf/types"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 
-	"github.com/orientwalt/htdf/x/params/subspace"
+	"github.com/deep2chain/htdf/x/params/subspace"
 )
 
 // re-export types from subspace

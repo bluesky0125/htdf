@@ -3,7 +3,7 @@ package transient
 import (
 	"testing"
 
-	"github.com/orientwalt/htdf/store/types"
+	"github.com/deep2chain/htdf/store/types"
 	"github.com/stretchr/testify/require"
 )
 

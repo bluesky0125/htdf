@@ -4,7 +4,7 @@ package gov
 import (
 	"fmt"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 const (

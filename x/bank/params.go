@@ -1,7 +1,7 @@
 package bank
 
 import (
-	"github.com/orientwalt/htdf/x/params"
+	"github.com/deep2chain/htdf/x/params"
 )
 
 const (

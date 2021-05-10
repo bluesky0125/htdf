@@ -3,7 +3,7 @@ package keys
 import (
 	"testing"
 
-	"github.com/orientwalt/htdf/tests"
+	"github.com/deep2chain/htdf/tests"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/spf13/viper"

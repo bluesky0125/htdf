@@ -21,10 +21,10 @@ import (
 	"github.com/tendermint/tendermint/libs/log"
 	pvm "github.com/tendermint/tendermint/privval"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/server/config"
-	"github.com/orientwalt/htdf/version"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/server/config"
+	"github.com/deep2chain/htdf/version"
 )
 
 // server context

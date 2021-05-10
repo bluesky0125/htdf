@@ -1,7 +1,7 @@
 package guardian
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // GenesisState - all guardian state that must be provided at genesis

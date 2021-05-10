@@ -7,16 +7,16 @@ import (
 	"github.com/spf13/viper"
 	amino "github.com/tendermint/go-amino"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/client/utils"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	authtxb "github.com/orientwalt/htdf/x/auth/client/txbuilder"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/client/utils"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	authtxb "github.com/deep2chain/htdf/x/auth/client/txbuilder"
 
-	hscorecli "github.com/orientwalt/htdf/x/core/client/cli"
-	"github.com/orientwalt/htdf/x/distribution/client/common"
-	"github.com/orientwalt/htdf/x/distribution/types"
+	hscorecli "github.com/deep2chain/htdf/x/core/client/cli"
+	"github.com/deep2chain/htdf/x/distribution/client/common"
+	"github.com/deep2chain/htdf/x/distribution/types"
 	log "github.com/sirupsen/logrus"
 )
 

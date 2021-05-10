@@ -1,4 +1,4 @@
-module github.com/orientwalt/htdf
+module github.com/deep2chain/htdf
 
 go 1.12
 

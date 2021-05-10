@@ -3,8 +3,8 @@ package protocol
 import (
 	"encoding/json"
 
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 )
 

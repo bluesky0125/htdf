@@ -5,8 +5,8 @@ import (
 
 	dbm "github.com/tendermint/tendermint/libs/db"
 
-	"github.com/orientwalt/htdf/types"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 var _ sdk.MultiStore = multiStore{}

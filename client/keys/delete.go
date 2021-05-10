@@ -8,8 +8,8 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/crypto/keys"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/crypto/keys"
 
 	"github.com/spf13/cobra"
 )

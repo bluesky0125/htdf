@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"testing"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
-	distr "github.com/orientwalt/htdf/x/distribution"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
+	distr "github.com/deep2chain/htdf/x/distribution"
 	"github.com/stretchr/testify/require"
 )
 

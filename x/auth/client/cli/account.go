@@ -3,10 +3,10 @@ package cli
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // GetAccountCmd returns a query account that will display the state of the

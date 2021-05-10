@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"math/big"
 
-	sdk "github.com/orientwalt/htdf/types"
-	auth "github.com/orientwalt/htdf/x/auth"
+	sdk "github.com/deep2chain/htdf/types"
+	auth "github.com/deep2chain/htdf/x/auth"
 
-	"github.com/orientwalt/htdf/evm/types"
+	"github.com/deep2chain/htdf/evm/types"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
 	ethstate "github.com/ethereum/go-ethereum/core/state"

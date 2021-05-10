@@ -3,11 +3,11 @@ package utils
 import (
 	"fmt"
 
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/client/tx"
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/x/gov"
-	"github.com/orientwalt/htdf/x/gov/tags"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/client/tx"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/x/gov"
+	"github.com/deep2chain/htdf/x/gov/tags"
 )
 
 const (

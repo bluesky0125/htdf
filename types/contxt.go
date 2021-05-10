@@ -11,8 +11,8 @@ import (
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/orientwalt/htdf/store/gaskv"
-	stypes "github.com/orientwalt/htdf/store/types"
+	"github.com/deep2chain/htdf/store/gaskv"
+	stypes "github.com/deep2chain/htdf/store/types"
 )
 
 /*

@@ -1,6 +1,6 @@
 package types
 
-import "github.com/orientwalt/htdf/codec"
+import "github.com/deep2chain/htdf/codec"
 
 // Register the sdk message type
 func RegisterCodec(cdc *codec.Codec) {

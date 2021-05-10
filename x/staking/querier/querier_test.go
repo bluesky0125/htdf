@@ -7,10 +7,10 @@ import (
 	"github.com/stretchr/testify/require"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	keep "github.com/orientwalt/htdf/x/staking/keeper"
-	"github.com/orientwalt/htdf/x/staking/types"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	keep "github.com/deep2chain/htdf/x/staking/keeper"
+	"github.com/deep2chain/htdf/x/staking/types"
 )
 
 var (

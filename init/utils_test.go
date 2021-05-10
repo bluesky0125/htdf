@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/tests"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/tests"
 
 	"github.com/stretchr/testify/require"
 )

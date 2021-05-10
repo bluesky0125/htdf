@@ -15,9 +15,9 @@ import (
 	"github.com/tendermint/tendermint/privval"
 	"github.com/tendermint/tendermint/types"
 
-	appver "github.com/orientwalt/htdf/app/v2"
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/server"
+	appver "github.com/deep2chain/htdf/app/v0"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/server"
 )
 
 // ExportGenesisFile creates and writes the genesis configuration to disk. An

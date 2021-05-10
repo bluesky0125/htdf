@@ -1,8 +1,8 @@
 package rootmulti
 
 import (
-	"github.com/orientwalt/htdf/store/dbadapter"
-	"github.com/orientwalt/htdf/store/types"
+	"github.com/deep2chain/htdf/store/dbadapter"
+	"github.com/deep2chain/htdf/store/types"
 )
 
 var commithash = []byte("FAKE_HASH")

@@ -1,10 +1,10 @@
 package cli
 
 import (
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/codec"
-	htdfservice "github.com/orientwalt/htdf/x/core"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/codec"
+	htdfservice "github.com/deep2chain/htdf/x/core"
 	"github.com/spf13/cobra"
 )
 

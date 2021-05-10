@@ -5,10 +5,10 @@ const (
 )
 
 // import (
-// 	"github.com/orientwalt/htdf/codec"
-// 	sdk "github.com/orientwalt/htdf/types"
-// 	"github.com/orientwalt/htdf/x/distribution/types"
-// 	"github.com/orientwalt/htdf/x/params"
+// 	"github.com/deep2chain/htdf/codec"
+// 	sdk "github.com/deep2chain/htdf/types"
+// 	"github.com/deep2chain/htdf/x/distribution/types"
+// 	"github.com/deep2chain/htdf/x/params"
 // )
 
 // // keeper of the htdfservice store

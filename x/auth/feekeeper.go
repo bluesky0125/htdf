@@ -1,8 +1,8 @@
 package auth
 
 import (
-	codec "github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	codec "github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 var (

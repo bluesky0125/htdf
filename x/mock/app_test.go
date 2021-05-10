@@ -3,14 +3,14 @@ package mock
 import (
 	"testing"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
-	hscore "github.com/orientwalt/htdf/x/core"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
+	hscore "github.com/deep2chain/htdf/x/core"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/crypto"
 	"github.com/tendermint/tendermint/crypto/secp256k1"
 	"github.com/stretchr/testify/require"
-	newevmtypes "github.com/orientwalt/htdf/evm/types"
+	newevmtypes "github.com/deep2chain/htdf/evm/types"
 )
 
 type (

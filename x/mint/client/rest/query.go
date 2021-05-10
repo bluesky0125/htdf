@@ -7,11 +7,11 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/client/rpc"
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/types/rest"
-	"github.com/orientwalt/htdf/x/mint"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/client/rpc"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/types/rest"
+	"github.com/deep2chain/htdf/x/mint"
 )
 
 func registerQueryRoutes(cliCtx context.CLIContext, r *mux.Router, cdc *codec.Codec) {

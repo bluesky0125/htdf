@@ -9,7 +9,7 @@ FROM golang:1.11-alpine as construction
 ENV PACKAGES make git curl build-base gcc musl-dev linux-headers 
 
 # Set working directory for the build
-WORKDIR /go/src/github.com/orientwalt/htdf
+WORKDIR /go/src/github.com/deep2chain/htdf
 
 RUN apk add --update $PACKAGES
 
@@ -24,7 +24,7 @@ FROM alpine:latest
 
 RUN apk add --update ca-certificates
 WORKDIR /root
-COPY --from=construction /go/src/github.com/orientwalt/htdf/build/* /usr/local/bin/
+COPY --from=construction /go/src/github.com/deep2chain/htdf/build/* /usr/local/bin/
 
 EXPOSE 1317 26656 26657
 CMD ["hsd"]

@@ -3,11 +3,11 @@ package keys
 import (
 	"errors"
 	"fmt"
-	"github.com/orientwalt/htdf/client"
+	"github.com/deep2chain/htdf/client"
 
-	"github.com/orientwalt/htdf/crypto"
-	"github.com/orientwalt/htdf/crypto/keys"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/crypto"
+	"github.com/deep2chain/htdf/crypto/keys"
+	sdk "github.com/deep2chain/htdf/types"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

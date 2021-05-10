@@ -3,9 +3,9 @@ package keys
 import (
 	"testing"
 
-	"github.com/orientwalt/htdf/crypto/keys"
-	"github.com/orientwalt/htdf/tests"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/crypto/keys"
+	"github.com/deep2chain/htdf/tests"
+	sdk "github.com/deep2chain/htdf/types"
 
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"

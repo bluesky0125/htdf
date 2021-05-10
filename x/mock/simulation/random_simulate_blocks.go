@@ -13,12 +13,12 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 	cmn "github.com/tendermint/tendermint/libs/common"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	bam "github.com/orientwalt/htdf/x/mock/baseapp"
+	bam "github.com/deep2chain/htdf/x/mock/baseapp"
 )
 
 // Simulate tests application by sending random messages.

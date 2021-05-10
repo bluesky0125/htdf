@@ -4,11 +4,11 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"github.com/orientwalt/htdf/store/dbadapter"
-	"github.com/orientwalt/htdf/store/gaskv"
-	"github.com/orientwalt/htdf/store/iavl"
-	"github.com/orientwalt/htdf/store/types"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/store/dbadapter"
+	"github.com/deep2chain/htdf/store/gaskv"
+	"github.com/deep2chain/htdf/store/iavl"
+	"github.com/deep2chain/htdf/store/types"
+	sdk "github.com/deep2chain/htdf/types"
 
 	"github.com/stretchr/testify/require"
 

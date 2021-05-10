@@ -1,7 +1,7 @@
 package state
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
 )

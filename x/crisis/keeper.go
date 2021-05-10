@@ -1,8 +1,8 @@
 package crisis
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/params"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/params"
 )
 
 // Keeper - crisis keeper

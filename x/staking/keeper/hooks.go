@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // AfterValidatorCreated - call hook if registered

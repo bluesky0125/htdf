@@ -1,6 +1,6 @@
 package protocol
 
-import sdk "github.com/orientwalt/htdf/types"
+import sdk "github.com/deep2chain/htdf/types"
 
 const (
 	// all store name

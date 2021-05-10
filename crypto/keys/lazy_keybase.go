@@ -6,8 +6,8 @@ import (
 	"github.com/tendermint/tendermint/crypto"
 	cmn "github.com/tendermint/tendermint/libs/common"
 
-	"github.com/orientwalt/htdf/crypto/keys/hd"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/crypto/keys/hd"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 var _ Keybase = lazyKeybase{}

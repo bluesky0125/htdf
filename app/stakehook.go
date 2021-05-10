@@ -1,9 +1,9 @@
 package app
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
-	distr "github.com/orientwalt/htdf/x/distribution"
-	"github.com/orientwalt/htdf/x/slashing"
+	sdk "github.com/deep2chain/htdf/types"
+	distr "github.com/deep2chain/htdf/x/distribution"
+	"github.com/deep2chain/htdf/x/slashing"
 )
 
 var _ sdk.StakingHooks = StakingHooks{}

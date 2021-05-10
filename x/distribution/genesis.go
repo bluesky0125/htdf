@@ -1,8 +1,8 @@
 package distribution
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/distribution/types"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/distribution/types"
 )
 
 // InitGenesis sets distribution information for genesis

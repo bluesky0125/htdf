@@ -3,8 +3,8 @@ package ibc
 import (
 	"encoding/json"
 
-	codec "github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	codec "github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 var (

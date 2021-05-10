@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"strings"
 
-	"github.com/orientwalt/htdf/x/auth"
+	"github.com/deep2chain/htdf/x/auth"
 	"github.com/tendermint/go-amino"
 )
 

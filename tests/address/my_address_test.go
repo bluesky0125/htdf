@@ -2,10 +2,10 @@ package address
 
 import (
 	"fmt"
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 
 	"github.com/magiconair/properties/assert"
-	"github.com/orientwalt/htdf/params"
+	"github.com/deep2chain/htdf/params"
 	"testing"
 )
 

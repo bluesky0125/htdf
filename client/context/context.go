@@ -9,11 +9,11 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/client/keys"
-	"github.com/orientwalt/htdf/codec"
-	cryptokeys "github.com/orientwalt/htdf/crypto/keys"
-	"github.com/orientwalt/htdf/x/auth"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/client/keys"
+	"github.com/deep2chain/htdf/codec"
+	cryptokeys "github.com/deep2chain/htdf/crypto/keys"
+	"github.com/deep2chain/htdf/x/auth"
 
 	"github.com/spf13/viper"
 
@@ -23,7 +23,7 @@ import (
 	tmliteProxy "github.com/tendermint/tendermint/lite/proxy"
 	rpcclient "github.com/tendermint/tendermint/rpc/client"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 var (

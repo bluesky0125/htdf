@@ -8,7 +8,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/orientwalt/htdf/params"
+	"github.com/deep2chain/htdf/params"
 )
 
 const (

@@ -1,8 +1,8 @@
 package service
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/service/tags"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/service/tags"
 )
 
 // handle all "service" type messages.

@@ -6,11 +6,11 @@ import (
 	"github.com/stretchr/testify/require"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
-	"github.com/orientwalt/htdf/x/bank"
-	"github.com/orientwalt/htdf/x/mock"
-	stakekeeper "github.com/orientwalt/htdf/x/staking/keeper"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
+	"github.com/deep2chain/htdf/x/bank"
+	"github.com/deep2chain/htdf/x/mock"
+	stakekeeper "github.com/deep2chain/htdf/x/staking/keeper"
 )
 
 // getMockApp returns an initialized mock application for this module.

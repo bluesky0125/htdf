@@ -7,9 +7,9 @@ import (
 	"github.com/tendermint/tendermint/crypto"
 	"github.com/tendermint/tendermint/crypto/multisig"
 
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/params"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/params"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 var (
@@ -80,13 +80,13 @@ func (tx StdTx) ValidateFee() sdk.Error {
 		return sdk.ErrInvalidGas(fmt.Sprintf("Tx[count(msgs)=%d] gaswanted must be greater than %d", len(msgs), minTxGasWanted))
 	}
 
- 	// this block was commented by yqq 2020-11-24
-	// moved to app/v2/auth/stdtx.go, make this is compatible with old version 
-	// 
+	// this block was commented by yqq 2020-11-24
+	// moved to app/v2/auth/stdtx.go, make this is compatible with old version
+	//
 	// Checking maximum gaswanted condition for transactions
-	// if tx.Fee.GasWanted > params.TxGasLimit {
-	// 	return sdk.ErrInvalidGas(fmt.Sprintf("Tx's GasWanted Amount[%d] can't excess TxGasLimit[%d]", tx.Fee.GasWanted, params.TxGasLimit))
-	// }
+	if tx.Fee.GasWanted > params.TxGasLimit {
+		return sdk.ErrInvalidGas(fmt.Sprintf("GasWanted[%d]  of Tx could not excess TxGasLimit[%d]", tx.Fee.GasWanted, params.TxGasLimit))
+	}
 	return nil
 }
 

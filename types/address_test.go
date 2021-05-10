@@ -7,7 +7,7 @@ import (
 
 	"strings"
 
-	"github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/types"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/crypto/ed25519"
 )

@@ -3,8 +3,8 @@ package gov
 import (
 	"fmt"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/gov/tags"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/gov/tags"
 )
 
 // Called every block, process inflation, update validator set

@@ -1,10 +1,10 @@
 package accounts
 
 import (
-	"github.com/orientwalt/htdf/x/auth"
+	"github.com/deep2chain/htdf/x/auth"
 
-	sdk "github.com/orientwalt/htdf/types"
-	authtxb "github.com/orientwalt/htdf/x/auth/client/txbuilder"
+	sdk "github.com/deep2chain/htdf/types"
+	authtxb "github.com/deep2chain/htdf/x/auth/client/txbuilder"
 )
 
 type Account struct {

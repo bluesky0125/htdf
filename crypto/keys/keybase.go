@@ -9,11 +9,11 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/orientwalt/htdf/crypto"
-	"github.com/orientwalt/htdf/crypto/keys/hd"
-	"github.com/orientwalt/htdf/crypto/keys/keyerror"
-	"github.com/orientwalt/htdf/crypto/keys/mintkey"
-	"github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/crypto"
+	"github.com/deep2chain/htdf/crypto/keys/hd"
+	"github.com/deep2chain/htdf/crypto/keys/keyerror"
+	"github.com/deep2chain/htdf/crypto/keys/mintkey"
+	"github.com/deep2chain/htdf/types"
 
 	bip39 "github.com/cosmos/go-bip39"
 

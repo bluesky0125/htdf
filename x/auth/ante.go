@@ -12,16 +12,17 @@ import (
 	"github.com/tendermint/tendermint/crypto/multisig"
 	"github.com/tendermint/tendermint/crypto/secp256k1"
 
-	"github.com/orientwalt/htdf/codec"
-	txparam "github.com/orientwalt/htdf/params"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/codec"
+	txparam "github.com/deep2chain/htdf/params"
+	sdk "github.com/deep2chain/htdf/types"
 	log "github.com/sirupsen/logrus"
 )
 
 var (
 	// simulation signature values used to estimate gas consumption
-	simSecp256k1Pubkey secp256k1.PubKeySecp256k1
-	simSecp256k1Sig    [64]byte
+	simSecp256k1Pubkey    secp256k1.PubKeySecp256k1
+	simSecp256k1Sig       [64]byte
+	GetMsgSendDataHandler sdk.GetMsgDataFunc = nil
 )
 
 func init() {
@@ -167,13 +168,57 @@ func NewAnteHandler(ak AccountKeeper, fck FeeCollectionKeeper) sdk.AnteHandler {
 
 		// junying-todo, 2019-11-19
 		// Deduct(DefaultMsgGas * len(Msgs)) for non-htdfservice msgs
-		if !stdTx.Fee.Amount().IsZero() && !ExistsMsgSend(tx) {
+		fExistsMsgSend := ExistsMsgSend(tx)
+		var retGasWanted uint64 = stdTx.Fee.GasWanted
+
+		if !stdTx.Fee.Amount().IsZero() && !fExistsMsgSend {
 			estimatedFee := EstimateFee(stdTx)
-			signerAccs[0], res = DeductFees(ctx.BlockHeader().Time, signerAccs[0], estimatedFee)
+			fOnlyCheckBalanceEnoughForFee := false // so we will deduct account's balance
+			signerAccs[0], res = DeductFees(ctx.BlockHeader().Time, signerAccs[0], estimatedFee, fOnlyCheckBalanceEnoughForFee)
 			if !res.IsOK() {
 				return newCtx, res, true
 			}
 			fck.AddCollectedFees(newCtx, estimatedFee.Amount())
+		} else if fExistsMsgSend && !isGenesis {
+			// only for htdfservice/MsgSend
+			// by yqq 2020-11-16
+			// to fix issue #6
+			// only check account's balance whether is enough for fee, NOT modify account's balance
+			// On the other hand, because of ValidateBasic has estimated the gasWanted roughly and check stdTx.Fee.GasWanted.
+			// Therefore, there only check balance of account.
+			fOnlyCheckBalanceEnoughForFee := true
+			maxFee := NewStdFee(stdTx.Fee.GasWanted, stdTx.Fee.GasPrice)
+			signerAccs[0], res = DeductFees(ctx.BlockHeader().Time, signerAccs[0], maxFee, fOnlyCheckBalanceEnoughForFee)
+			if !res.IsOK() {
+				log.Error("== DeductFees failed, NewAnteHandler refused this transaction")
+				return newCtx, res, true
+			}
+
+			// NOTE: htdfservice SendMsg, only inlucde one SendMsg in a Tx
+			if msgs := stdTx.GetMsgs(); len(msgs) == 1 && GetMsgSendDataHandler != nil {
+				if data, err := GetMsgSendDataHandler(msgs[0]); err != nil {
+					// ONLY log error msg , then continue
+					log.Error(fmt.Sprintf("%v", err.Error()))
+				} else {
+					if len(data) == 0 {
+						if stdTx.Fee.GasWanted > txparam.DefaultTxGas*7 {
+							retGasWanted = txparam.DefaultMsgGas
+							log.Info(fmt.Sprintf("adjusted gasWanted=%d with suggested gasWanted=%d", stdTx.Fee.GasWanted, retGasWanted))
+						}
+					} // else {
+					// TODO: There are two cases :
+					// 1. the contract transaction ,
+					//   create contract : to is empty, create contract transaction, if data is invalid, all gas will be consumed
+					//   call contract function: to isn't empty,(DefaultCreateContractGas + the extra gas) will be consumed
+					// 2. the normal send transaction , with
+					// if msgSend.To.Empty() {
+					// 	// so this situation is safety
+					// } else {
+					// 	// FIX ME :  this issue had be fixed in app/v2/core/handler.go
+					// }
+					// }
+				}
+			}
 		}
 
 		// stdSigs contains the sequence number, account number, and signatures.
@@ -200,7 +245,7 @@ func NewAnteHandler(ak AccountKeeper, fck FeeCollectionKeeper) sdk.AnteHandler {
 
 		// TODO: tx tags (?)
 		log.Debugln("NewAnteHandler:FINISHED")
-		return newCtx, sdk.Result{GasWanted: stdTx.Fee.GasWanted}, false //, GasUsed: newCtx.GasMeter().GasConsumed()}, false // continue...
+		return newCtx, sdk.Result{GasWanted: retGasWanted}, false //, GasUsed: newCtx.GasMeter().GasConsumed()}, false // continue...
 	}
 }
 
@@ -370,7 +415,7 @@ func consumeMultisignatureVerificationGas(meter sdk.GasMeter,
 //
 // NOTE: We could use the CoinKeeper (in addition to the AccountKeeper, because
 // the CoinKeeper doesn't give us accounts), but it seems easier to do this.
-func DeductFees(blockTime time.Time, acc Account, fee StdFee) (Account, sdk.Result) {
+func DeductFees(blockTime time.Time, acc Account, fee StdFee, fOnlyCheckBalanceEnoughForFee bool) (Account, sdk.Result) {
 	coins := acc.GetCoins()
 	feeAmount := fee.Amount()
 
@@ -395,8 +440,13 @@ func DeductFees(blockTime time.Time, acc Account, fee StdFee) (Account, sdk.Resu
 		).Result()
 	}
 
-	if err := acc.SetCoins(newCoins); err != nil {
-		return nil, sdk.ErrInternal(err.Error()).Result()
+	// fOnlyCheckBalanceEnoughForFee , by yqq 2020-11-16
+	// for issue #6:
+	// prevent account which has not enough balance for paying fee sending tx unlimitedly,
+	if !fOnlyCheckBalanceEnoughForFee {
+		if err := acc.SetCoins(newCoins); err != nil {
+			return nil, sdk.ErrInternal(err.Error()).Result()
+		}
 	}
 
 	return acc, sdk.Result{}

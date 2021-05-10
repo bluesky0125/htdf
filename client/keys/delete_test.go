@@ -5,9 +5,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/orientwalt/htdf/client"
+	"github.com/deep2chain/htdf/client"
 
-	"github.com/orientwalt/htdf/tests"
+	"github.com/deep2chain/htdf/tests"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

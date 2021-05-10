@@ -34,7 +34,7 @@ hscli query contract [contract-addr] [callcode]
     hscli query staking params
     hscli query distr params
 
-### [staking cmds](https://github.com/orientwalt/htdf/blob/master/x/staking/client/cli/tx.go)
+### [staking cmds](https://github.com/deep2chain/htdf/blob/master/x/staking/client/cli/tx.go)
     delegator-addr: htdf1zf07fyt2an2ral8zve0u4y7lzqa6x4lqfeyl8m
     validator-addr: htdfvaloper1zf07fyt2an2ral8zve0u4y7lzqa6x4lqrquxss
     amount: 100000stake
@@ -44,7 +44,7 @@ hscli query contract [contract-addr] [callcode]
 
     [delegate]
     hscli tx staking delegate [delegator-addr] [validator-addr] [amount] --gas-adjustment=1.5 --gas-price=100
-### [rewards](https://github.com/orientwalt/htdf/blob/master/x/distribution/client/cli/tx.go)
+### [rewards](https://github.com/deep2chain/htdf/blob/master/x/distribution/client/cli/tx.go)
     [query]
     hscli query distr rewards [delegator-addr]
     hscli query distr rewards <delegator_address> <validator_address>

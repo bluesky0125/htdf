@@ -1,10 +1,10 @@
 package distribution
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/distribution/keeper"
-	"github.com/orientwalt/htdf/x/distribution/tags"
-	"github.com/orientwalt/htdf/x/distribution/types"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/distribution/keeper"
+	"github.com/deep2chain/htdf/x/distribution/tags"
+	"github.com/deep2chain/htdf/x/distribution/types"
 )
 
 func NewHandler(k keeper.Keeper) sdk.Handler {

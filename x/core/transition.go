@@ -6,11 +6,11 @@ import (
 	"os"
 
 	ethcore "github.com/ethereum/go-ethereum/core"
-	evmstate "github.com/orientwalt/htdf/evm/state"
-	"github.com/orientwalt/htdf/evm/vm"
+	evmstate "github.com/deep2chain/htdf/evm/state"
+	"github.com/deep2chain/htdf/evm/vm"
 	log "github.com/sirupsen/logrus"
 
-	apptypes "github.com/orientwalt/htdf/types"
+	apptypes "github.com/deep2chain/htdf/types"
 )
 
 func init() {

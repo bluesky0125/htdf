@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/magiconair/properties/assert"
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 func TestConvert1(t *testing.T) {

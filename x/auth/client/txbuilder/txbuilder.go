@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"strings"
 
-	crkeys "github.com/orientwalt/htdf/crypto/keys"
+	crkeys "github.com/deep2chain/htdf/crypto/keys"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/client/keys"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/client/keys"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
 
 	"github.com/spf13/viper"
 )

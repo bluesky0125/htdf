@@ -3,8 +3,8 @@ package tx
 import (
 	"encoding/hex"
 
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 	ctypes "github.com/tendermint/tendermint/rpc/core/types"
 )
 

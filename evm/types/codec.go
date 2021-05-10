@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/orientwalt/htdf/codec"
+	"github.com/deep2chain/htdf/codec"
 )
 
 var typesCodec = codec.New()

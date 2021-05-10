@@ -4,9 +4,9 @@ import (
 	"github.com/spf13/cobra"
 	amino "github.com/tendermint/go-amino"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/x/crisis"
-	"github.com/orientwalt/htdf/x/crisis/client/cli"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/x/crisis"
+	"github.com/deep2chain/htdf/x/crisis/client/cli"
 )
 
 // ModuleClient exports all client functionality from this module

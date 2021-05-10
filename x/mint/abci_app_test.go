@@ -5,7 +5,7 @@ import (
 	"github.com/magiconair/properties/assert"
 	"testing"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 func TestMineToken(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 
 	"github.com/tendermint/tendermint/crypto"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // Account is an interface used to store coins at a given address within state.

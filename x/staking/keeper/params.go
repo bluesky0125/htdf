@@ -3,9 +3,9 @@ package keeper
 import (
 	"time"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/params"
-	"github.com/orientwalt/htdf/x/staking/types"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/params"
+	"github.com/deep2chain/htdf/x/staking/types"
 )
 
 // Default parameter namespace

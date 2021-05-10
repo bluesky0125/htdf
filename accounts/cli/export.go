@@ -4,9 +4,9 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/orientwalt/htdf/crypto/keys/mintkey"
+	"github.com/deep2chain/htdf/crypto/keys/mintkey"
 
-	"github.com/orientwalt/htdf/accounts/keystore"
+	"github.com/deep2chain/htdf/accounts/keystore"
 	"github.com/spf13/cobra"
 )
 

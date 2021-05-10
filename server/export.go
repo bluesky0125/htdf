@@ -15,7 +15,7 @@ import (
 	"github.com/tendermint/tendermint/libs/cli"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/orientwalt/htdf/codec"
+	"github.com/deep2chain/htdf/codec"
 )
 
 const (

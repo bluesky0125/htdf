@@ -2,8 +2,8 @@ package main
 
 import (
 	"encoding/hex"
-	"github.com/orientwalt/htdf/params"
-	"github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/params"
+	"github.com/deep2chain/htdf/types"
 	"math/big"
 
 	"errors"
@@ -11,7 +11,7 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 
 	"io/ioutil"
 	"os"

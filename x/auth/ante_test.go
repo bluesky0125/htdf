@@ -12,7 +12,8 @@ import (
 	"github.com/tendermint/tendermint/crypto/multisig"
 	"github.com/tendermint/tendermint/crypto/secp256k1"
 
-	sdk "github.com/orientwalt/htdf/types"
+	txparam "github.com/deep2chain/htdf/params"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // run the tx through the anteHandler and ensure its valid
@@ -311,9 +312,42 @@ func TestAnteHandlerFees(t *testing.T) {
 	input.ak.SetAccount(ctx, acc1)
 	checkValidTx(t, anteHandler, ctx, tx, false)
 
-
 	require.True(t, input.fck.GetCollectedFees(ctx).IsEqual(sdk.NewCoins(sdk.NewInt64Coin("satoshi", 600000))))
 	require.True(t, input.ak.GetAccount(ctx, addr1).GetCoins().AmountOf("satoshi").Equal(sdk.NewInt(0)))
+
+	// add test case for v2(fix issue #9) by yqq , 2020-11-24
+	// test critical condition for TxGasLimit
+	{
+		ctx = ctx.WithBlockHeight(100) // for non-genesis block
+		bigfee := NewStdFee(txparam.TxGasLimit, 100)
+		seqs[0] = acc1.GetSequence()
+		bigtx := newTestTx(ctx, msgs, privs, accnums, seqs, bigfee)
+		acc1.SetCoins(bigfee.Amount())
+		input.ak.SetAccount(ctx, acc1)
+		checkValidTx(t, anteHandler, ctx, bigtx, false)
+	}
+
+	// add test for exceed TxGasLimit,  genesis block
+	{
+		ctx = ctx.WithBlockHeight(0)
+		bigfee := NewStdFee(txparam.TxGasLimit+1, 100)
+		seqs[0] = acc1.GetSequence()
+		bigtx := newTestTx(ctx, msgs, privs, accnums, seqs, bigfee)
+		acc1.SetCoins(bigfee.Amount())
+		input.ak.SetAccount(ctx, acc1)
+		checkValidTx(t, anteHandler, ctx, bigtx, false)
+	}
+
+	//add test for exceed TxGasLimit,  non-genesis block
+	{
+		ctx = ctx.WithBlockHeight(100) // for non-genesis block
+		bigfee := NewStdFee(txparam.TxGasLimit+1, 100)
+		seqs[0] = acc1.GetSequence()
+		bigtx := newTestTx(ctx, msgs, privs, accnums, seqs, bigfee)
+		acc1.SetCoins(bigfee.Amount())
+		input.ak.SetAccount(ctx, acc1)
+		checkInvalidTx(t, anteHandler, ctx, bigtx, false, sdk.CodeInvalidGas)
+	}
 
 }
 

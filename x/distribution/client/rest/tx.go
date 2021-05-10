@@ -5,14 +5,14 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/orientwalt/htdf/client/context"
-	clientrest "github.com/orientwalt/htdf/client/rest"
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/x/distribution/client/common"
-	"github.com/orientwalt/htdf/x/distribution/types"
+	"github.com/deep2chain/htdf/client/context"
+	clientrest "github.com/deep2chain/htdf/client/rest"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/x/distribution/client/common"
+	"github.com/deep2chain/htdf/x/distribution/types"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/types/rest"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/types/rest"
 )
 
 func registerTxRoutes(cliCtx context.CLIContext, r *mux.Router,

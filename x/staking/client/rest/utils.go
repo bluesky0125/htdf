@@ -6,13 +6,13 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/client/tx"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/types/rest"
-	"github.com/orientwalt/htdf/x/staking"
-	"github.com/orientwalt/htdf/x/staking/tags"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/client/tx"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/types/rest"
+	"github.com/deep2chain/htdf/x/staking"
+	"github.com/deep2chain/htdf/x/staking/tags"
 )
 
 // contains checks if the a given query contains one of the tx types

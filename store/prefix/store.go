@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/orientwalt/htdf/store/cachekv"
-	"github.com/orientwalt/htdf/store/tracekv"
-	"github.com/orientwalt/htdf/store/types"
+	"github.com/deep2chain/htdf/store/cachekv"
+	"github.com/deep2chain/htdf/store/tracekv"
+	"github.com/deep2chain/htdf/store/types"
 )
 
 var _ types.KVStore = Store{}

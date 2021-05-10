@@ -3,7 +3,7 @@ package cmd
 import (
 	"path/filepath"
 
-	liteserver "github.com/orientwalt/htdf/lite/server"
+	liteserver "github.com/deep2chain/htdf/lite/server"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"github.com/tendermint/tmlibs/cli"

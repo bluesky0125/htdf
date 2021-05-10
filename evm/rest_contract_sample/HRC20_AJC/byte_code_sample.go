@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/orientwalt/htdf/params"
+	"github.com/deep2chain/htdf/params"
 	"math/big"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 
 	"io/ioutil"
 	"os"

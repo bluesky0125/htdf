@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/gov/tags"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/gov/tags"
 )
 
 // Handle all "gov" type messages.

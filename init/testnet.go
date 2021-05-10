@@ -9,14 +9,14 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/orientwalt/htdf/app"
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/codec"
-	srvconfig "github.com/orientwalt/htdf/server/config"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
-	authtx "github.com/orientwalt/htdf/x/auth/client/txbuilder"
-	"github.com/orientwalt/htdf/x/staking"
+	"github.com/deep2chain/htdf/app"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/codec"
+	srvconfig "github.com/deep2chain/htdf/server/config"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
+	authtx "github.com/deep2chain/htdf/x/auth/client/txbuilder"
+	"github.com/deep2chain/htdf/x/staking"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
@@ -26,10 +26,10 @@ import (
 	"github.com/tendermint/tendermint/types"
 	tmtime "github.com/tendermint/tendermint/types/time"
 
-	"github.com/orientwalt/htdf/accounts/keystore"
-	appver "github.com/orientwalt/htdf/app/v2"
-	"github.com/orientwalt/htdf/server"
-	hsutils "github.com/orientwalt/htdf/utils"
+	"github.com/deep2chain/htdf/accounts/keystore"
+	appver "github.com/deep2chain/htdf/app/v0"
+	"github.com/deep2chain/htdf/server"
+	hsutils "github.com/deep2chain/htdf/utils"
 )
 
 var (

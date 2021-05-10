@@ -4,8 +4,8 @@ import (
 	"encoding/binary"
 	"time"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/staking/types"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/staking/types"
 )
 
 // TODO remove some of these prefixes once have working multistore

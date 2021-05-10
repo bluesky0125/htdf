@@ -5,8 +5,8 @@ import (
 	"bytes"
 	"fmt"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
 )
 
 // An sdk.Tx which is its own sdk.Msg.

@@ -5,14 +5,14 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
-	"github.com/orientwalt/htdf/x/bank"
-	"github.com/orientwalt/htdf/x/mock"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
+	"github.com/deep2chain/htdf/x/bank"
+	"github.com/deep2chain/htdf/x/mock"
 
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/crypto/secp256k1"
-	newevmtypes "github.com/orientwalt/htdf/evm/types"
+	newevmtypes "github.com/deep2chain/htdf/evm/types"
 )
 
 // initialize the mock application for this module

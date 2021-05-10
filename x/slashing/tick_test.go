@@ -8,8 +8,8 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/staking"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/staking"
 )
 
 func TestBeginBlocker(t *testing.T) {

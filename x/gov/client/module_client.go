@@ -4,10 +4,10 @@ import (
 	"github.com/spf13/cobra"
 	amino "github.com/tendermint/go-amino"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/x/gov"
-	govcli "github.com/orientwalt/htdf/x/gov/client/cli"
-	hsgovcli "github.com/orientwalt/htdf/x/gov/client/cli"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/x/gov"
+	govcli "github.com/deep2chain/htdf/x/gov/client/cli"
+	hsgovcli "github.com/deep2chain/htdf/x/gov/client/cli"
 )
 
 // ModuleClient exports all client functionality from this module

@@ -3,7 +3,7 @@ package auth
 import (
 	"fmt"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // GenesisState - all auth state that must be provided at genesis

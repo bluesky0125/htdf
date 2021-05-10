@@ -1,7 +1,7 @@
 package ibc
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // IBC errors reserve 200 ~ 299.

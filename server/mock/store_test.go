@@ -7,7 +7,7 @@ import (
 
 	dbm "github.com/tendermint/tendermint/libs/db"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 func TestStore(t *testing.T) {

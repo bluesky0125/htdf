@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/orientwalt/htdf/codec"
+	"github.com/deep2chain/htdf/codec"
 	log "github.com/sirupsen/logrus"
 )
 

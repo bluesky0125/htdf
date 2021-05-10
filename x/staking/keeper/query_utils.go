@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/staking/types"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/staking/types"
 )
 
 // Return all validators that a delegator is bonded to. If maxRetrieve is supplied, the respective amount will be returned.

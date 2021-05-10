@@ -1,9 +1,9 @@
 package upgrade
 
 import (
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	stake "github.com/orientwalt/htdf/x/staking"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	stake "github.com/deep2chain/htdf/x/staking"
 )
 
 type Keeper struct {

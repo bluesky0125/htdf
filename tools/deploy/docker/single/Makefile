@@ -6,7 +6,7 @@ else
 endif
 
 COMMIT_HASH := $(shell git rev-parse --short HEAD)
-BUILD_FLAGS = -tags netgo -ldflags "-X github.com/orientwalt/htdf/version.GitCommit=${COMMIT_HASH}"
+BUILD_FLAGS = -tags netgo -ldflags "-X github.com/deep2chain/htdf/version.GitCommit=${COMMIT_HASH}"
 # docker part[single-node part]
 DOCKER_TAG = unstable
 DOCKER_IMAGE = falcon0125/htdfsingle

@@ -14,8 +14,8 @@ import (
 	pvm "github.com/tendermint/tendermint/privval"
 	tversion "github.com/tendermint/tendermint/version"
 
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 const (

@@ -1,8 +1,8 @@
 package store
 
 import (
-	"github.com/orientwalt/htdf/store/types"
-	stypes "github.com/orientwalt/htdf/store/types"
+	"github.com/deep2chain/htdf/store/types"
+	stypes "github.com/deep2chain/htdf/store/types"
 )
 
 // Import cosmos-sdk/types/store.go for convenience.

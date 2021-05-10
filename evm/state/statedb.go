@@ -6,15 +6,15 @@ import (
 	"sort"
 	"sync"
 
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
 
 	ethcmn "github.com/ethereum/go-ethereum/common"
 	ethstate "github.com/ethereum/go-ethereum/core/state"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 
-	newevmtypes "github.com/orientwalt/htdf/evm/types"
+	newevmtypes "github.com/deep2chain/htdf/evm/types"
 )
 
 type revision struct {

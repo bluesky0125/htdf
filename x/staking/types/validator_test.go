@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

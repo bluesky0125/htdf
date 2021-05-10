@@ -1,8 +1,8 @@
 package baseapp
 
 import (
-	hserver "github.com/orientwalt/htdf/server"
-	sdk "github.com/orientwalt/htdf/types"
+	hserver "github.com/deep2chain/htdf/server"
+	sdk "github.com/deep2chain/htdf/types"
 	"github.com/tendermint/tendermint/abci/server"
 	abci "github.com/tendermint/tendermint/abci/types"
 	cmn "github.com/tendermint/tendermint/libs/common"

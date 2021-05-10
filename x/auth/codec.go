@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"github.com/orientwalt/htdf/codec"
+	"github.com/deep2chain/htdf/codec"
 )
 
 // RegisterCodec registers concrete types on the codec

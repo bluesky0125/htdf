@@ -8,9 +8,9 @@ import (
 	"github.com/spf13/viper"
 	"github.com/tendermint/tendermint/libs/cli"
 
-	"github.com/orientwalt/htdf/tests"
+	"github.com/deep2chain/htdf/tests"
 
-	"github.com/orientwalt/htdf/client"
+	"github.com/deep2chain/htdf/client"
 
 	"github.com/stretchr/testify/assert"
 )

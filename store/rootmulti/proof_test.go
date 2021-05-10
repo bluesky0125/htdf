@@ -7,8 +7,8 @@ import (
 	dbm "github.com/tendermint/tendermint/libs/db"
 	"github.com/stretchr/testify/require"
 
-	"github.com/orientwalt/htdf/store/iavl"
-	"github.com/orientwalt/htdf/store/types"
+	"github.com/deep2chain/htdf/store/iavl"
+	"github.com/deep2chain/htdf/store/types"
 )
 
 func TestVerifyIAVLStoreQueryProof(t *testing.T) {

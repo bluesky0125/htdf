@@ -6,10 +6,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/codec" // XXX fix
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/slashing"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/codec" // XXX fix
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/slashing"
 )
 
 // GetCmdQuerySigningInfo implements the command to query signing info.

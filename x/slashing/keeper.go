@@ -6,10 +6,10 @@ import (
 
 	"github.com/tendermint/tendermint/crypto"
 
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/params"
-	stake "github.com/orientwalt/htdf/x/staking/types"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/params"
+	stake "github.com/deep2chain/htdf/x/staking/types"
 )
 
 // Keeper of the slashing store
@@ -187,8 +187,11 @@ func (k Keeper) handleValidatorSignature(ctx sdk.Context, addr crypto.Address, p
 			// Note that this *can* result in a negative "distributionHeight" up to -ValidatorUpdateDelay-1,
 			// i.e. at the end of the pre-genesis block (none) = at the beginning of the genesis block.
 			// That's fine since this is just used to filter unbonding delegations & redelegations.
-			distributionHeight := height - sdk.ValidatorUpdateDelay - 1
-			k.validatorSet.Slash(ctx, consAddr, distributionHeight, power, k.SlashFractionDowntime(ctx))
+			// distributionHeight := height - sdk.ValidatorUpdateDelay - 1
+			// junying-todo, 2020-05-26
+			// Disable Slashing for ValidatorSignatureMissing.
+			// k.validatorSet.Slash(ctx, consAddr, distributionHeight, power, k.SlashFractionDowntime(ctx))
+			logger.Info("No Slashing For ValidatorSignatureMissing(Jailed:%s)\n", pubkey.Address())
 			k.validatorSet.Jail(ctx, consAddr)
 			signInfo.JailedUntil = ctx.BlockHeader().Time.Add(k.DowntimeJailDuration(ctx))
 

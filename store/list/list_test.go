@@ -11,9 +11,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/store/rootmulti"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/store/rootmulti"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 type TestStruct struct {

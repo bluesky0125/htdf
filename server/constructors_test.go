@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/orientwalt/htdf/tests"
+	"github.com/deep2chain/htdf/tests"
 )
 
 func Test_openDB(t *testing.T) {

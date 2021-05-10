@@ -63,7 +63,7 @@ build_tags += $(BUILD_TAGS)
 build_tags := $(strip $(build_tags))
 
 BUILD_FLAGS = -tags "$(build_tags)" -ldflags '-X version.GitCommit=${COMMIT_HASH} -X main.GitCommit=${COMMIT_HASH} -X main.DEBUGAPI=${DEBUGAPI} -X main.GitBranch=${GIT_BRANCH}'
-BUILD_FLAGS_STATIC_LINK = -tags "$(build_tags)" -ldflags '-X github.com/orientwalt/htdf/version.GitCommit=${COMMIT_HASH} -X main.GitCommit=${COMMIT_HASH} -X main.DEBUGAPI=${DEBUGAPI} -X main.GitBranch=${GIT_BRANCH} -linkmode external -w -extldflags "-static"'
+BUILD_FLAGS_STATIC_LINK = -tags "$(build_tags)" -ldflags '-X github.com/deep2chain/htdf/version.GitCommit=${COMMIT_HASH} -X main.GitCommit=${COMMIT_HASH} -X main.DEBUGAPI=${DEBUGAPI} -X main.GitBranch=${GIT_BRANCH} -linkmode external -w -extldflags "-static"'
 
 all: build
 

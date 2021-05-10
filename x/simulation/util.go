@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/orientwalt/htdf/app"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/app"
+	sdk "github.com/deep2chain/htdf/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 )
 

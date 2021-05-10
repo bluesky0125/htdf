@@ -6,10 +6,10 @@ import (
 	"math/rand"
 	"time"
 
-	baseapp "github.com/orientwalt/htdf/app"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/gov"
-	"github.com/orientwalt/htdf/x/simulation"
+	baseapp "github.com/deep2chain/htdf/app"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/gov"
+	"github.com/deep2chain/htdf/x/simulation"
 )
 
 // SimulateSubmittingVotingAndSlashingForProposal simulates creating a msg Submit Proposal

@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/orientwalt/htdf/codec"
+	"github.com/deep2chain/htdf/codec"
 )
 
 func TestInsertKeyJSON(t *testing.T) {

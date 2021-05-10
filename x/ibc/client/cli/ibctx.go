@@ -3,13 +3,13 @@ package cli
 import (
 	"encoding/hex"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/client/utils"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	authtxb "github.com/orientwalt/htdf/x/auth/client/txbuilder"
-	"github.com/orientwalt/htdf/x/ibc"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/client/utils"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	authtxb "github.com/deep2chain/htdf/x/auth/client/txbuilder"
+	"github.com/deep2chain/htdf/x/ibc"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

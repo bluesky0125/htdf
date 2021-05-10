@@ -10,8 +10,8 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/orientwalt/htdf/store"
-	"github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/store"
+	"github.com/deep2chain/htdf/types"
 )
 
 type MockLogger struct {

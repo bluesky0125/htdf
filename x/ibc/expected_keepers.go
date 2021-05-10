@@ -1,6 +1,6 @@
 package ibc
 
-import sdk "github.com/orientwalt/htdf/types"
+import sdk "github.com/deep2chain/htdf/types"
 
 // expected bank keeper
 type BankKeeper interface {

@@ -14,11 +14,11 @@ import (
 	dbm "github.com/tendermint/tendermint/libs/db"
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/store"
-	"github.com/orientwalt/htdf/types"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/version"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/store"
+	"github.com/deep2chain/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/version"
 )
 
 // Key to store the header in the DB itself.

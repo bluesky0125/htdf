@@ -6,9 +6,9 @@ import (
 
 	"github.com/tendermint/tendermint/crypto"
 
-	codec "github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/params"
+	codec "github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/params"
 	log "github.com/sirupsen/logrus"
 )
 

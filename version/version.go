@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/params"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/params"
 	"github.com/spf13/cobra"
 )
 

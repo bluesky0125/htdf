@@ -1,6 +1,6 @@
 package types
 
-import sdk "github.com/orientwalt/htdf/types"
+import sdk "github.com/deep2chain/htdf/types"
 
 // expected staking keeper
 type StakingKeeper interface {

@@ -11,8 +11,8 @@ import (
 	cmn "github.com/tendermint/tendermint/libs/common"
 	dbm "github.com/tendermint/tendermint/libs/db"
 
-	"github.com/orientwalt/htdf/store/errors"
-	"github.com/orientwalt/htdf/store/types"
+	"github.com/deep2chain/htdf/store/errors"
+	"github.com/deep2chain/htdf/store/types"
 )
 
 var (

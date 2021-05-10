@@ -3,7 +3,7 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/orientwalt/htdf/client"
+	"github.com/deep2chain/htdf/client"
 )
 
 // Commands registers a sub-tree of commands to interact with

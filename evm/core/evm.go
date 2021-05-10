@@ -20,11 +20,11 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/orientwalt/htdf/utils"
+	"github.com/deep2chain/htdf/utils"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/orientwalt/htdf/evm/vm"
+	"github.com/deep2chain/htdf/evm/vm"
 )
 
 // ChainContext supports retrieving headers and consensus parameters from the

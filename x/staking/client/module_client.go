@@ -4,10 +4,10 @@ import (
 	"github.com/spf13/cobra"
 	amino "github.com/tendermint/go-amino"
 
-	"github.com/orientwalt/htdf/client"
-	hstakingcli "github.com/orientwalt/htdf/x/staking/client/cli"
-	stakingcli "github.com/orientwalt/htdf/x/staking/client/cli"
-	"github.com/orientwalt/htdf/x/staking/types"
+	"github.com/deep2chain/htdf/client"
+	hstakingcli "github.com/deep2chain/htdf/x/staking/client/cli"
+	stakingcli "github.com/deep2chain/htdf/x/staking/client/cli"
+	"github.com/deep2chain/htdf/x/staking/types"
 )
 
 // ModuleClient exports all client functionality from this module

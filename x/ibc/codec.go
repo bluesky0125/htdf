@@ -1,7 +1,7 @@
 package ibc
 
 import (
-	"github.com/orientwalt/htdf/codec"
+	"github.com/deep2chain/htdf/codec"
 )
 
 // Register concrete types on codec codec

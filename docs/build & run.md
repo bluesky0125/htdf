@@ -2,7 +2,7 @@
     # source code
     mkdir -p sourceBuffer/github.com/orientwalt
     cd sourceBuffer/github.com/orientwalt
-    git clone https://github.com/orientwalt/htdf.git    
+    git clone https://github.com/deep2chain/htdf.git    
     cd htdf
     
     # warning

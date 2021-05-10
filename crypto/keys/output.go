@@ -1,7 +1,7 @@
 package keys
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // KeyOutput defines a structure wrapping around an Info object used for output

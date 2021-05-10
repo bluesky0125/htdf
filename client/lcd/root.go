@@ -14,14 +14,14 @@ import (
 	"github.com/tendermint/tendermint/libs/log"
 	rpcserver "github.com/tendermint/tendermint/rpc/lib/server"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/codec"
-	keybase "github.com/orientwalt/htdf/crypto/keys"
-	"github.com/orientwalt/htdf/server"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/codec"
+	keybase "github.com/deep2chain/htdf/crypto/keys"
+	"github.com/deep2chain/htdf/server"
 
 	// Import statik for light client stuff
-	_ "github.com/orientwalt/htdf/client/lcd/statik"
+	_ "github.com/deep2chain/htdf/client/lcd/statik"
 )
 
 // RestServer represents the Light Client Rest server

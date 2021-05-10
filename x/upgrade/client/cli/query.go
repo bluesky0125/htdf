@@ -3,13 +3,13 @@ package cli
 import (
 	"fmt"
 
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	stake "github.com/orientwalt/htdf/x/staking"
-	"github.com/orientwalt/htdf/x/staking/types"
-	"github.com/orientwalt/htdf/x/upgrade"
-	upgcli "github.com/orientwalt/htdf/x/upgrade/client"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	stake "github.com/deep2chain/htdf/x/staking"
+	"github.com/deep2chain/htdf/x/staking/types"
+	"github.com/deep2chain/htdf/x/upgrade"
+	upgcli "github.com/deep2chain/htdf/x/upgrade/client"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

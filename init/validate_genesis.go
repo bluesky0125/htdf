@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/app/v0"
-	"github.com/orientwalt/htdf/server"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/app/v0"
+	"github.com/deep2chain/htdf/server"
 	"github.com/tendermint/tendermint/types"
 	"github.com/spf13/cobra"
 )

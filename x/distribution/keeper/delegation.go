@@ -3,10 +3,10 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 
-	"github.com/orientwalt/htdf/x/distribution/tags"
-	"github.com/orientwalt/htdf/x/distribution/types"
+	"github.com/deep2chain/htdf/x/distribution/tags"
+	"github.com/deep2chain/htdf/x/distribution/types"
 )
 
 // initialize starting info for a new delegation

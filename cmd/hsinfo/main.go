@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 	"github.com/spf13/cobra"
 )
 

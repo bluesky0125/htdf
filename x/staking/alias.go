@@ -2,10 +2,10 @@
 package staking
 
 import (
-	"github.com/orientwalt/htdf/x/staking/keeper"
-	"github.com/orientwalt/htdf/x/staking/querier"
-	"github.com/orientwalt/htdf/x/staking/tags"
-	"github.com/orientwalt/htdf/x/staking/types"
+	"github.com/deep2chain/htdf/x/staking/keeper"
+	"github.com/deep2chain/htdf/x/staking/querier"
+	"github.com/deep2chain/htdf/x/staking/tags"
+	"github.com/deep2chain/htdf/x/staking/types"
 )
 
 type (

@@ -6,9 +6,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/crypto/secp256k1"
 
-	app "github.com/orientwalt/htdf/app/v0"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
+	app "github.com/deep2chain/htdf/app/v0"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 func TestAddGenesisAccount(t *testing.T) {

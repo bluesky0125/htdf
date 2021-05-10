@@ -5,8 +5,8 @@ import (
 
 	dbm "github.com/tendermint/tendermint/libs/db"
 
-	"github.com/orientwalt/htdf/store"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/store"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // File for storing in-package BaseApp optional functions,

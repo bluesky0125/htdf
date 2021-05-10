@@ -1,7 +1,7 @@
 package bank
 
 import (
-	sdk "github.com/orientwalt/htdf/types"
+	sdk "github.com/deep2chain/htdf/types"
 )
 
 // RouterKey is they name of the bank module

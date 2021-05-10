@@ -3,7 +3,7 @@ package gaskv
 import (
 	"io"
 
-	"github.com/orientwalt/htdf/store/types"
+	"github.com/deep2chain/htdf/store/types"
 )
 
 var _ types.KVStore = &Store{}

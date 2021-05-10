@@ -7,13 +7,13 @@
 ### 如果代表地址里面没钱的话，转账一笔
     hscli query accounts [delegator-addr]
     hscli tx send [fromaddr] [delegator-addr] [samount] --gas-price=100
-### [stake-抵押，解绑](https://github.com/orientwalt/htdf/blob/master/x/staking/client/cli/tx.go)   
+### [stake-抵押，解绑](https://github.com/deep2chain/htdf/blob/master/x/staking/client/cli/tx.go)   
     [抵押]
     hscli tx staking delegate [delegator-addr] [validator-addr] [amount] --gas-price=100
     
     [解绑]
     hscli tx staking unbond [delegator-addr] [validator-addr] [amount]  --gas-price=100
-### [奖励-查询，回收](https://github.com/orientwalt/htdf/blob/master/x/distribution/client/cli/tx.go)
+### [奖励-查询，回收](https://github.com/deep2chain/htdf/blob/master/x/distribution/client/cli/tx.go)
     [查询]
     hscli query distr rewards [delegator-addr]
 

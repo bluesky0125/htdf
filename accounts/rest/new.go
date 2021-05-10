@@ -6,8 +6,8 @@ import (
 
 	"net/http"
 
-	"github.com/orientwalt/htdf/accounts/keystore"
-	"github.com/orientwalt/htdf/types/rest"
+	"github.com/deep2chain/htdf/accounts/keystore"
+	"github.com/deep2chain/htdf/types/rest"
 )
 
 type newaccountBody struct {

@@ -1,7 +1,7 @@
 [![CircleCI](https://circleci.com/gh/orientwalt/htdf/tree/master.svg?style=shield)](https://circleci.com/gh/orientwalt/htdf/tree/master)
-[![](https://godoc.org/github.com/orientwalt/htdf?status.svg)](http://godoc.org/github.com/orientwalt/htdf) [![Go Report Card](https://goreportcard.com/badge/github.com/orientwalt/htdf)](https://goreportcard.com/report/github.com/orientwalt/htdf)
+[![](https://godoc.org/github.com/deep2chain/htdf?status.svg)](http://godoc.org/github.com/deep2chain/htdf) [![Go Report Card](https://goreportcard.com/badge/github.com/deep2chain/htdf)](https://goreportcard.com/report/github.com/deep2chain/htdf)
 [![Travis](https://travis-ci.org/orientwalt/htdf.svg?branch=master)](https://travis-ci.org/orientwalt/htdf)
-[![version](https://img.shields.io/github/tag/orientwalt/htdf.svg)](https://github.com/orientwalt/htdf/releases/latest)
+[![version](https://img.shields.io/github/tag/orientwalt/htdf.svg)](https://github.com/deep2chain/htdf/releases/latest)
 [![Go version](https://img.shields.io/badge/go-1.12.9-blue.svg)](https://github.com/moovweb/gvm)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
@@ -15,7 +15,7 @@
 hsd
 hscli
 ```
-## [Quick Start](https://github.com/orientwalt/htdf/blob/master/docs/build%20%26%20run.md)
+## [Quick Start](https://github.com/deep2chain/htdf/blob/master/docs/build%20%26%20run.md)
 You can follow the below steps. You should type password for your genesis account after runing first command.
 ```
 make new

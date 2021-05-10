@@ -13,12 +13,12 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/orientwalt/htdf/app"
-	v0 "github.com/orientwalt/htdf/app/v0"
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/server"
-	"github.com/orientwalt/htdf/x/auth"
+	"github.com/deep2chain/htdf/app"
+	v0 "github.com/deep2chain/htdf/app/v0"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/server"
+	"github.com/deep2chain/htdf/x/auth"
 )
 
 const (

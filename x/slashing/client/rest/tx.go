@@ -6,13 +6,13 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/orientwalt/htdf/client/context"
-	clientrest "github.com/orientwalt/htdf/client/rest"
-	"github.com/orientwalt/htdf/codec"
-	"github.com/orientwalt/htdf/crypto/keys"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/types/rest"
-	"github.com/orientwalt/htdf/x/slashing"
+	"github.com/deep2chain/htdf/client/context"
+	clientrest "github.com/deep2chain/htdf/client/rest"
+	"github.com/deep2chain/htdf/codec"
+	"github.com/deep2chain/htdf/crypto/keys"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/types/rest"
+	"github.com/deep2chain/htdf/x/slashing"
 )
 
 func registerTxRoutes(cliCtx context.CLIContext, r *mux.Router, cdc *codec.Codec, kb keys.Keybase) {

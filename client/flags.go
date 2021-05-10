@@ -5,8 +5,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/orientwalt/htdf/params"
-	sdk "github.com/orientwalt/htdf/types"
+	"github.com/deep2chain/htdf/params"
+	sdk "github.com/deep2chain/htdf/types"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

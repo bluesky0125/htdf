@@ -4,9 +4,9 @@ import (
 	"github.com/spf13/cobra"
 	amino "github.com/tendermint/go-amino"
 
-	sdkclient "github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/x/mint"
-	"github.com/orientwalt/htdf/x/mint/client/cli"
+	sdkclient "github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/x/mint"
+	"github.com/deep2chain/htdf/x/mint/client/cli"
 )
 
 // ModuleClient exports all CLI client functionality from the minting module.

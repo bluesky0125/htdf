@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"strings"
 
-	htdf "github.com/orientwalt/htdf/app"
-	sdk "github.com/orientwalt/htdf/types"
-	"github.com/orientwalt/htdf/x/auth"
+	htdf "github.com/deep2chain/htdf/app"
+	sdk "github.com/deep2chain/htdf/types"
+	"github.com/deep2chain/htdf/x/auth"
 	"github.com/tendermint/tendermint/crypto"
 	"github.com/tendermint/tendermint/crypto/ed25519"
 	"github.com/spf13/cobra"

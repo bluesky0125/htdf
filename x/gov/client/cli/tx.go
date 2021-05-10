@@ -4,22 +4,22 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/orientwalt/htdf/client"
-	"github.com/orientwalt/htdf/client/context"
-	"github.com/orientwalt/htdf/client/utils"
-	"github.com/orientwalt/htdf/codec"
-	sdk "github.com/orientwalt/htdf/types"
-	authtxb "github.com/orientwalt/htdf/x/auth/client/txbuilder"
-	"github.com/orientwalt/htdf/x/gov"
+	"github.com/deep2chain/htdf/client"
+	"github.com/deep2chain/htdf/client/context"
+	"github.com/deep2chain/htdf/client/utils"
+	"github.com/deep2chain/htdf/codec"
+	sdk "github.com/deep2chain/htdf/types"
+	authtxb "github.com/deep2chain/htdf/x/auth/client/txbuilder"
+	"github.com/deep2chain/htdf/x/gov"
 	"github.com/pkg/errors"
 
 	"strings"
 
 	"github.com/spf13/cobra"
 
-	govClientUtils "github.com/orientwalt/htdf/x/gov/client/utils"
+	govClientUtils "github.com/deep2chain/htdf/x/gov/client/utils"
 
-	hscorecli "github.com/orientwalt/htdf/x/core/client/cli"
+	hscorecli "github.com/deep2chain/htdf/x/core/client/cli"
 	"github.com/spf13/viper"
 )
 
