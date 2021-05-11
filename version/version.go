@@ -17,7 +17,7 @@ const AppVersion = 0
 
 //-------------------------------------------
 // ProtocolVersion - protocol version of (software)upgrade
-const ProtocolVersion = 2 // start from version 2  by yqq 2021-01-04
+const ProtocolVersion = 0 // start from version 2  by yqq 2021-01-04
 
 var Version = params.Version
 

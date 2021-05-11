@@ -6,7 +6,6 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	v2auth "github.com/deep2chain/htdf/app/v2/auth"
 	"github.com/deep2chain/htdf/params"
 	sdk "github.com/deep2chain/htdf/types"
 	"github.com/deep2chain/htdf/x/auth"
@@ -412,7 +411,7 @@ func TestSendMsg_GenesisBlock_V2(t *testing.T) {
 	// setup
 	input := setupTestInput()
 	ctx := input.ctx
-	anteHandler := v2auth.NewAnteHandler(input.ak, input.fck)
+	anteHandler := auth.NewAnteHandler(input.ak, input.fck)
 
 	// keys and addresses
 	priv1, _, addr1 := keyPubAddr()
@@ -537,7 +536,7 @@ func TestSendMsg_NonGenesisBlock_V2(t *testing.T) {
 	// setup
 	input := setupTestInput()
 	ctx := input.ctx
-	anteHandler := v2auth.NewAnteHandler(input.ak, input.fck)
+	anteHandler := auth.NewAnteHandler(input.ak, input.fck)
 
 	// keys and addresses
 	priv1, _, addr1 := keyPubAddr()

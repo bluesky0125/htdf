@@ -1,6 +1,7 @@
 package mint
 
 import (
+	"math/big"
 	"os"
 
 	sdk "github.com/deep2chain/htdf/types"
@@ -26,6 +27,11 @@ func init() {
 }
 
 // junying-todo, 2019-07-17
+//	6,000,000	25
+//	6,000,000	12.5
+// 	6,000,000	6.25
+//	...
+// ex:
 //	BlksPerRound = 100
 //	rewards+commission+community-pool
 //	hscli query distr rewards htdf1zulqmaqlsgrgmagenaqf02p8kfgsuqkdwgwj80
@@ -34,6 +40,14 @@ func init() {
 //	not true becasue proper get more rewards,that's, different rewards on every node.
 //  hscli query distr commission cosmosvaloper1lwjmdnks33xwnmfayc64ycprww49n33mtm92ne
 // 	hscli query distr community-pool
+const (
+	// Block Reward of First Round
+	InitialReward = 25 * 100000000 //25htdf = 2500000000satoshi
+	// Block Count Per Round
+	BlksPerRound = 6000000 //10 //6,000,000
+	// Last Round Index with Block Rewards
+	LastRoundIndex = 31
+)
 
 // junying-todo, 2019-07-15
 // single node: 88.2 for delegators, 11.8 for validator(commission)
@@ -45,51 +59,26 @@ func calcParams(ctx sdk.Context, k Keeper) (sdk.Dec, sdk.Dec, sdk.Dec) {
 	log.Infoln("totalSupply", totalSupply)
 	// block index
 	curBlkHeight := ctx.BlockHeight()
+	////fmt.Printf("current Blk Height: %d\n", curBlkHeight)
+	// roundIndex = curBlkHeight / BlkCountPerRound
+	roundIndex := new(big.Int).Div(big.NewInt(curBlkHeight), big.NewInt(BlksPerRound))
 	log.Infoln("curBlkHeight:", curBlkHeight)
-
-	// check terminate condition, junying-todo, 2019-12-05
-	if totalSupply.GT(sdk.NewInt(TotalLiquidAsSatoshi)) { // || curBlkHeight > TotalMineableBlks {
-		return sdk.NewDec(0), sdk.NewDec(0), sdk.NewDec(0)
+	log.Infoln("roundIndex:", roundIndex)
+	// BlockProvision = 25 / 2**roundIndex
+	BlockProvision := sdk.ZeroDec()
+	if roundIndex.Cmp(big.NewInt(LastRoundIndex)) == -1 {
+		division := new(big.Int).Exp(big.NewInt(2), roundIndex, nil)
+		divisionDec, err := sdk.NewDecFromStr(division.String())
+		if err == nil {
+			BlockProvision = sdk.NewDec(int64(InitialReward)).Quo(divisionDec)
+		}
 	}
-
-	// sine params
-	curAmplitude := k.sk.Amplitude(ctx)
-	curCycle := k.sk.Cycle(ctx)
-	curLastIndex := k.sk.LastIndex(ctx)
-	// check if it's time for new cycle
-	if curBlkHeight >= (curLastIndex + curCycle) {
-		k.sk.SetAmplitude(ctx, randomAmplitude(curBlkHeight))
-		k.sk.SetCycle(ctx, randomCycle(curAmplitude))
-		k.sk.SetLastIndex(ctx, curBlkHeight)
-	}
-
-	AnnualProvisionsDec, Inflation, BlockProvision := GetMineToken(curBlkHeight, totalSupply, curAmplitude, curCycle, curLastIndex)
+	// AnnualProvisions = fRatio * FirstRoundBlkReward
+	AnnualProvisions := BlockProvision.Mul(sdk.NewDec(int64(BlksPerRound)))
 	// junying-todo, 2020-02-04
 	k.SetReward(ctx, curBlkHeight, BlockProvision.TruncateInt64())
-	return AnnualProvisionsDec, Inflation, BlockProvision
-}
-
-// GetMineToken...
-func GetMineToken(curBlkHeight int64, totalSupply sdk.Int, curAmplitude int64, curCycle int64, curLastIndex int64) (sdk.Dec, sdk.Dec, sdk.Dec) {
-
-	// block index
-	// log.Infoln("curBlkHeight:", curBlkHeight)
-
-	AnnualProvisionsDec := sdk.NewDec(AnnualProvisionAsSatoshi)
-	// Inflation = AnnualProvisions / totalSupply
-	Inflation := AnnualProvisionsDec.Quo(sdk.NewDecFromInt(totalSupply))
-
-	BlockReward := calcRewardAsSatoshi(curAmplitude, curCycle, curBlkHeight-curLastIndex)
-	if BlockReward < 0 {
-		panic(0)
-	}
-	BlockProvision := sdk.NewDec(BlockReward)
-	log.Infoln("BlockProvision:", BlockReward)
-	log.Infoln("curAmplitude:", curAmplitude)
-	log.Infoln("curCycle:", curCycle)
-	log.Infoln("curLastIndex:", curLastIndex)
-
-	return AnnualProvisionsDec, Inflation, BlockProvision
+	Inflation := AnnualProvisions.Quo(sdk.NewDecFromInt(totalSupply))
+	return AnnualProvisions, Inflation, BlockProvision
 }
 
 // Inflate every block, update inflation parameters once per hour
