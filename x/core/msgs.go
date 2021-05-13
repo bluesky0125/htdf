@@ -1,4 +1,4 @@
-package htdfservice
+package sscqservice
 
 import (
 	"encoding/hex"
@@ -102,7 +102,7 @@ func NewMsgSendForData(fromaddr sdk.AccAddress, toaddr sdk.AccAddress, amount sd
 }
 
 // Route should return the name of the module
-func (msg MsgSend) Route() string { return "htdfservice" }
+func (msg MsgSend) Route() string { return "sscqservice" }
 
 // Type should return the action
 func (msg MsgSend) Type() string { return "send" }
@@ -211,7 +211,7 @@ func NewMsgAdd(addr sdk.AccAddress, amount sdk.Coins) MsgAdd {
 }
 
 // Route should return the name of the module
-func (msg MsgAdd) Route() string { return "htdfservice" }
+func (msg MsgAdd) Route() string { return "sscqservice" }
 
 // Type should return the action
 func (msg MsgAdd) Type() string { return "add" }

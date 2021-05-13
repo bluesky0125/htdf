@@ -8,7 +8,7 @@ import (
 	"github.com/deep2chain/htdf/codec"
 	"github.com/deep2chain/htdf/types/rest"
 	"github.com/deep2chain/htdf/x/auth"
-	htdfservice "github.com/deep2chain/htdf/x/core"
+	sscqservice "github.com/deep2chain/htdf/x/core"
 )
 
 type broadcastBody struct {
@@ -51,7 +51,7 @@ func BroadcastTxRawRequestHandlerFn(cdc *codec.Codec, cliCtx context.CLIContext)
 			return
 		}
 
-		stdTx, err := htdfservice.ReadStdTxFromRawData(cliCtx.Codec, req.Tx)
+		stdTx, err := sscqservice.ReadStdTxFromRawData(cliCtx.Codec, req.Tx)
 		if err != nil {
 			rest.WriteErrorResponse(w, http.StatusInternalServerError, err.Error())
 			return

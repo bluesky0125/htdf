@@ -21,7 +21,7 @@ import (
 
 	sdk "github.com/deep2chain/htdf/types"
 	authcmd "github.com/deep2chain/htdf/x/auth/client/cli"
-	htdfservicecmd "github.com/deep2chain/htdf/x/core/client/cli"
+	sscqservicecmd "github.com/deep2chain/htdf/x/core/client/cli"
 
 	accounts "github.com/deep2chain/htdf/accounts/cli"
 	accrest "github.com/deep2chain/htdf/accounts/rest"
@@ -84,7 +84,7 @@ func main() {
 
 	rootCmd := &cobra.Command{
 		Use:   "hscli",
-		Short: "htdfservice Client",
+		Short: "sscqservice Client",
 	}
 
 	// Add --chain-id to persistent flags and mark it required
@@ -157,7 +157,7 @@ func queryCmd(cdc *amino.Codec, mc []sdk.ModuleClients) *cobra.Command {
 		tx.QueryTxCmd(cdc),
 		client.LineBreak,
 		authcmd.GetAccountCmd(storeAcc, cdc),
-		htdfservicecmd.GetCmdCall(cdc),
+		sscqservicecmd.GetCmdCall(cdc),
 		hsmintClient.GetCmdQueryBlockRewards(cdc),
 		hsmintClient.GetCmdQueryTotalProvisions(cdc),
 		upgradecmd.GetInfoCmd("upgrade", cdc),
@@ -179,15 +179,15 @@ func txCmd(cdc *amino.Codec, mc []sdk.ModuleClients) *cobra.Command {
 
 	if svrConfig.ApiSecurityLevel == svrConfig.ValueSecurityLevel_Low {
 		txCmd.AddCommand(
-			htdfservicecmd.GetCmdBurn(cdc),
-			htdfservicecmd.GetCmdCreate(cdc),
-			htdfservicecmd.GetCmdSend(cdc),
-			htdfservicecmd.GetCmdSign(cdc),
+			sscqservicecmd.GetCmdBurn(cdc),
+			sscqservicecmd.GetCmdCreate(cdc),
+			sscqservicecmd.GetCmdSend(cdc),
+			sscqservicecmd.GetCmdSign(cdc),
 		)
 	}
 
 	txCmd.AddCommand(
-		htdfservicecmd.GetCmdBroadCast(cdc),
+		sscqservicecmd.GetCmdBroadCast(cdc),
 		client.LineBreak,
 	)
 

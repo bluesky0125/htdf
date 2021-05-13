@@ -19,7 +19,7 @@ import (
 	sdkRest "github.com/deep2chain/htdf/types/rest"
 	"github.com/deep2chain/htdf/utils/unit_convert"
 	"github.com/deep2chain/htdf/x/auth"
-	htdfservice "github.com/deep2chain/htdf/x/core"
+	sscqservice "github.com/deep2chain/htdf/x/core"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	tmliteProxy "github.com/tendermint/tendermint/lite/proxy"
@@ -274,7 +274,7 @@ func GetBlockDetailFn(cliCtx context.CLIContext, cdc *codec.Codec) http.HandlerF
 				for _, msg := range currTx.GetMsgs() {
 					//fmt.Printf("msg|route=%s|type=%s\n", msg.Route(), msg.Type())
 					switch msg := msg.(type) {
-					case htdfservice.MsgSend:
+					case sscqservice.MsgSend:
 
 						displayTx.From = msg.From.String()
 						displayTx.To = msg.To.String()
@@ -432,7 +432,7 @@ func GetTxFn(cdc *codec.Codec, cliCtx context.CLIContext) http.HandlerFunc {
 		// 	for _, msg := range currTx.GetMsgs() {
 		// 		//fmt.Printf("msg|route=%s|type=%s\n", msg.Route(), msg.Type())
 		// 		switch msg := msg.(type) {
-		// 		case htdfservice.MsgSend:
+		// 		case sscqservice.MsgSend:
 		// 			displayTx.From = msg.From
 		// 			displayTx.To = msg.To
 		// 			displayTx.Amount = unit_convert.DefaultCoinsToBigCoins(msg.Amount)

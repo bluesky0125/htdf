@@ -1,4 +1,4 @@
-package htdfservice
+package sscqservice
 
 import (
 	"fmt"
@@ -45,7 +45,7 @@ func TestMsgSendRoute(t *testing.T) {
 	coins := sdk.NewCoins(sdk.NewInt64Coin("atom", 10))
 	var msg = NewMsgSendDefault(addr1, addr2, coins)
 
-	require.Equal(t, msg.Route(), "htdfservice")
+	require.Equal(t, msg.Route(), "sscqservice")
 	require.Equal(t, msg.Type(), "send")
 }
 

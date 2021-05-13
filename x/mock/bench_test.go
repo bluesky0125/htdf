@@ -5,7 +5,7 @@ import (
 
 	sdk "github.com/deep2chain/htdf/types"
 	"github.com/deep2chain/htdf/x/auth"
-	htdfservice "github.com/deep2chain/htdf/x/core"
+	sscqservice "github.com/deep2chain/htdf/x/core"
 	abci "github.com/tendermint/tendermint/abci/types"
 )
 
@@ -14,8 +14,8 @@ import (
 func getBenchmarkMockApp() (*App, error) {
 	mapp := NewApp()
 
-	htdfservice.RegisterCodec(mapp.Cdc)
-	mapp.Router().AddRoute("htdfservice", []*sdk.KVStoreKey{mapp.KeyAccount}, htdfservice.NewHandler(mapp.AccountKeeper, mapp.FeeKeeper, mapp.KeyStorage, mapp.KeyCode))
+	sscqservice.RegisterCodec(mapp.Cdc)
+	mapp.Router().AddRoute("sscqservice", []*sdk.KVStoreKey{mapp.KeyAccount}, sscqservice.NewHandler(mapp.AccountKeeper, mapp.FeeKeeper, mapp.KeyStorage, mapp.KeyCode))
 	err := mapp.CompleteSetup()
 	return mapp, err
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/deep2chain/htdf/codec"
 	sdk "github.com/deep2chain/htdf/types"
 	authtxb "github.com/deep2chain/htdf/x/auth/client/txbuilder"
-	htdfservice "github.com/deep2chain/htdf/x/core"
+	sscqservice "github.com/deep2chain/htdf/x/core"
 	"github.com/spf13/cobra"
 )
 
@@ -57,7 +57,7 @@ func GetCmdBurn(cdc *codec.Codec) *cobra.Command {
 
 			gas := txBldr.GasWanted()
 			fmt.Println("GetCmdBurn:txBldr.GasPrices():", txBldr.GasPrice())
-			msg := htdfservice.NewMsgSend(burnaddr, blackholeaddr, coins, txBldr.GasPrice(), gas)
+			msg := sscqservice.NewMsgSend(burnaddr, blackholeaddr, coins, txBldr.GasPrice(), gas)
 
 			cliCtx.PrintResponse = true
 

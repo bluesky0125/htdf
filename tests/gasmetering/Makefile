@@ -1,14 +1,14 @@
 # written by junying
 # 2019.10.28
 # index
-# 1.htdfservice tx
+# 1.sscqservice tx
 # - non-contract tx
 # - contract tx
 # 2.non-contract tx
 
 TMP_PATH = /tmp/result.json
 BLK_TIME = 6
-# htdfservice tx
+# sscqservice tx
 ## non-contract tx
 ### test cases
 #### gas < DefaultTxGas(21000)
@@ -68,7 +68,7 @@ test.contract.creation:
 	 python -c "result='passed!' if $$margin == $$GasPrice*$$gas_used else 'failed!'; print result";\
 	 echo "$$orgn1 - $$curr1 == $$margin == $$gas_used * $$GasPrice?";
 
-# non-htdfservice tx
+# non-sscqservice tx
 # staking unbond testing failed
 # after-unbounding balance = before-balance
 UNBOND_AMOUNT = 100000

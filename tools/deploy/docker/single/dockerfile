@@ -1,10 +1,10 @@
 # Written by junying, 2019-04-10
 #
 # Simple usage with a mounted data directory:
-# > docker build -t htdfservice .
+# > docker build -t sscqservice .
 # > docker images
-# > docker run -it -p 26657:26657 -p 26656:26656 -v ~/.hsd:/root/.hsd -v ~/.hscli:/root/.hscli  htdfservice hsd init --chain-id testchain
-# > docker run -it -p 26657:26657 -p 26656:26656 -v ~/.hsd:/root/.hsd -v ~/.hscli:/root/.hscli  htdfservice hsd start 
+# > docker run -it -p 26657:26657 -p 26656:26656 -v ~/.hsd:/root/.hsd -v ~/.hscli:/root/.hscli  sscqservice hsd init --chain-id testchain
+# > docker run -it -p 26657:26657 -p 26656:26656 -v ~/.hsd:/root/.hsd -v ~/.hscli:/root/.hscli  sscqservice hsd start 
 FROM alpine:latest
 
 RUN apk add --update ca-certificates

@@ -78,7 +78,7 @@ def test_normal_tx_send(conftest_args):
 
     tv = tx['tx']['value']
     assert len(tv['msg']) == 1
-    assert tv['msg'][0]['type'] == 'htdfservice/send'
+    assert tv['msg'][0]['type'] == 'sscqservice/send'
     assert int(tv['fee']['gas_wanted']) == gas_wanted
     assert int(tv['fee']['gas_price']) == gas_price
     assert tv['memo'] == memo
@@ -165,7 +165,7 @@ def test_normal_tx_with_data(conftest_args):
 
         tv = tx['tx']['value']
         assert len(tv['msg']) == 1
-        assert tv['msg'][0]['type'] == 'htdfservice/send'
+        assert tv['msg'][0]['type'] == 'sscqservice/send'
         assert int(tv['fee']['gas_wanted']) == gas_wanted
         assert int(tv['fee']['gas_price']) == gas_price
         assert tv['memo'] == memo
@@ -207,7 +207,7 @@ def test_normal_tx_with_data(conftest_args):
 
         tv = tx['tx']['value']
         assert len(tv['msg']) == 1
-        assert tv['msg'][0]['type'] == 'htdfservice/send'
+        assert tv['msg'][0]['type'] == 'sscqservice/send'
         assert int(tv['fee']['gas_wanted']) == gas_wanted
         assert int(tv['fee']['gas_price']) == gas_price
         assert tv['memo'] == memo
@@ -358,7 +358,7 @@ def test_normal_tx_gas_wanted_adjust(conftest_args):
 
         tv = tx['tx']['value']
         assert len(tv['msg']) == 1
-        assert tv['msg'][0]['type'] == 'htdfservice/send'
+        assert tv['msg'][0]['type'] == 'sscqservice/send'
         assert int(tv['fee']['gas_wanted']) == gas_wanted
         assert int(tv['fee']['gas_price']) == gas_price
         assert tv['memo'] == memo
@@ -397,7 +397,7 @@ def test_normal_tx_gas_wanted_adjust(conftest_args):
 
         tv = tx['tx']['value']
         assert len(tv['msg']) == 1
-        assert tv['msg'][0]['type'] == 'htdfservice/send'
+        assert tv['msg'][0]['type'] == 'sscqservice/send'
         assert int(tv['fee']['gas_wanted']) == gas_wanted
         assert int(tv['fee']['gas_price']) == gas_price
         assert tv['memo'] == memo
@@ -482,7 +482,7 @@ def test_normal_tx_gas_wanted_excess_7500000(conftest_args):
 
         tv = tx['tx']['value']
         assert len(tv['msg']) == 1
-        assert tv['msg'][0]['type'] == 'htdfservice/send'
+        assert tv['msg'][0]['type'] == 'sscqservice/send'
         assert int(tv['fee']['gas_wanted']) == gas_wanted
         assert int(tv['fee']['gas_price']) == gas_price
         assert tv['memo'] == memo

@@ -4,7 +4,7 @@ import (
 	"github.com/deep2chain/htdf/client"
 	"github.com/deep2chain/htdf/client/context"
 	"github.com/deep2chain/htdf/codec"
-	htdfservice "github.com/deep2chain/htdf/x/core"
+	sscqservice "github.com/deep2chain/htdf/x/core"
 	"github.com/spf13/cobra"
 )
 
@@ -23,7 +23,7 @@ func GetCmdBroadCast(cdc *codec.Codec) *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error {
 			// load sign tx from string
 			cliCtx := context.NewCLIContext().WithCodec(cdc)
-			stdTx, err := htdfservice.ReadStdTxFromRawData(cliCtx.Codec, args[0])
+			stdTx, err := sscqservice.ReadStdTxFromRawData(cliCtx.Codec, args[0])
 			if err != nil {
 				return err
 			}

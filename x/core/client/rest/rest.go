@@ -13,7 +13,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/deep2chain/htdf/x/auth"
-	htdfservice "github.com/deep2chain/htdf/x/core"
+	sscqservice "github.com/deep2chain/htdf/x/core"
 )
 
 const (
@@ -51,14 +51,14 @@ func QueryContractRequestHandlerFn(
 			rest.WriteErrorResponse(w, http.StatusInternalServerError, err.Error())
 			return
 		}
-		bz, err := cliCtx.Codec.MarshalJSON(htdfservice.NewQueryContractParams(contractaddr, code))
+		bz, err := cliCtx.Codec.MarshalJSON(sscqservice.NewQueryContractParams(contractaddr, code))
 		if err != nil {
 			rest.WriteErrorResponse(w, http.StatusNotFound,
 				"ERROR: height must be integer.")
 			return
 		}
 		//
-		route := fmt.Sprintf("custom/%s/%s", htdfservice.QuerierRoute, htdfservice.QueryContract)
+		route := fmt.Sprintf("custom/%s/%s", sscqservice.QuerierRoute, sscqservice.QueryContract)
 		res, err := cliCtx.QueryWithData(route, bz)
 		if err != nil {
 			rest.WriteErrorResponse(w, http.StatusInternalServerError, err.Error())

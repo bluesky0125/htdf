@@ -15,7 +15,7 @@ import (
 	"github.com/deep2chain/htdf/types/rest"
 	"github.com/deep2chain/htdf/utils/unit_convert"
 	authtxb "github.com/deep2chain/htdf/x/auth/client/txbuilder"
-	htdfservice "github.com/deep2chain/htdf/x/core"
+	sscqservice "github.com/deep2chain/htdf/x/core"
 	hscorecli "github.com/deep2chain/htdf/x/core/client/cli"
 )
 
@@ -104,7 +104,7 @@ func SendTxRequestHandlerFn(cdc *codec.Codec, cliCtx context.CLIContext) http.Ha
 
 		fmt.Printf("gasPrice=%d|gasWanted=%d\n", gasPrice, gasWanted)
 
-		msg := htdfservice.NewMsgSendForData(fromAddr, toAddr, unit_convert.BigCoinsToDefaultCoins(mreq.Amount), req.Data, gasPrice, gasWanted)
+		msg := sscqservice.NewMsgSendForData(fromAddr, toAddr, unit_convert.BigCoinsToDefaultCoins(mreq.Amount), req.Data, gasPrice, gasWanted)
 		CompleteAndBroadcastTxREST(w, cliCtx, req.BaseReq, mreq.BaseReq.Password, []sdk.Msg{msg}, cdc)
 
 	}
@@ -146,7 +146,7 @@ func CompleteAndBroadcastTxREST(w http.ResponseWriter, cliCtx context.CLIContext
 	)
 
 	// get fromaddr
-	fromaddr := msgs[0].(htdfservice.MsgSend).GetSigners()[0]
+	fromaddr := msgs[0].(sscqservice.MsgSend).GetSigners()[0]
 
 	txBldr, err = hscorecli.PrepareTxBuilder(txBldr, cliCtx, fromaddr)
 	if err != nil {

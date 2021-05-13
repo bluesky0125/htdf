@@ -11,7 +11,7 @@ import (
 	sdk "github.com/deep2chain/htdf/types"
 	"github.com/deep2chain/htdf/x/auth"
 	"github.com/deep2chain/htdf/x/bank"
-	htdfservice "github.com/deep2chain/htdf/x/core"
+	sscqservice "github.com/deep2chain/htdf/x/core"
 	"github.com/deep2chain/htdf/x/crisis"
 	distr "github.com/deep2chain/htdf/x/distribution"
 	"github.com/deep2chain/htdf/x/gov"
@@ -30,7 +30,7 @@ import (
 
 const (
 	//
-	RouterKey = "htdfservice"
+	RouterKey = "sscqservice"
 	TxSizeLimit = 1200000 // tx size is limited to 1200000(bytes)
 )
 
@@ -136,7 +136,7 @@ func (p *ProtocolV0) configCodec() {
 func MakeLatestCodec() *codec.Codec {
 	var cdc = codec.New()
 	newevmtypes.RegisterCodec(cdc)
-	htdfservice.RegisterCodec(cdc)
+	sscqservice.RegisterCodec(cdc)
 	params.RegisterCodec(cdc) // only used by querier
 	mint.RegisterCodec(cdc)   // only used by querier
 	// bank.RegisterCodec(cdc)
@@ -311,7 +311,7 @@ func (p *ProtocolV0) configRouters() {
 	stake.RegisterInvariants(&p.crisisKeeper, p.StakeKeeper, p.feeCollectionKeeper, p.distrKeeper, p.accountMapper)
 
 	p.router.
-		AddRoute(RouterKey, htdfservice.NewHandler(p.accountMapper, p.feeCollectionKeeper, protocol.KeyStorage, protocol.KeyCode)).
+		AddRoute(RouterKey, sscqservice.NewHandler(p.accountMapper, p.feeCollectionKeeper, protocol.KeyStorage, protocol.KeyCode)).
 		// AddRoute(protocol.BankRoute, bank.NewHandler(p.bankKeeper)).
 		AddRoute(protocol.StakeRoute, stake.NewHandler(p.StakeKeeper)).
 		AddRoute(protocol.SlashingRoute, slashing.NewHandler(p.slashingKeeper)).
@@ -323,7 +323,7 @@ func (p *ProtocolV0) configRouters() {
 
 	p.queryRouter.
 		AddRoute(protocol.AccountRoute, auth.NewQuerier(p.accountMapper)).
-		AddRoute(RouterKey, htdfservice.NewQuerier(p.accountMapper, protocol.KeyStorage, protocol.KeyCode)).
+		AddRoute(RouterKey, sscqservice.NewQuerier(p.accountMapper, protocol.KeyStorage, protocol.KeyCode)).
 		AddRoute(protocol.GovRoute, gov.NewQuerier(p.govKeeper)).
 		AddRoute(protocol.StakeRoute, stake.NewQuerier(p.StakeKeeper, p.cdc)).
 		AddRoute(protocol.DistrRoute, distr.NewQuerier(p.distrKeeper)).

@@ -8,7 +8,7 @@
         "memo": "contract test", 
         "msg": [
             {
-                "type": "htdfservice/send", 
+                "type": "sscqservice/send", 
                 "value": {
                     "Amount": [
                         {

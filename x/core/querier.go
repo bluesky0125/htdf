@@ -1,4 +1,4 @@
-package htdfservice
+package sscqservice
 
 import (
 	"fmt"
@@ -45,7 +45,7 @@ const (
 	TxGasLimit = 100000
 )
 
-// NewQuerier returns a htdfservice Querier handler.
+// NewQuerier returns a sscqservice Querier handler.
 func NewQuerier(accountKeeper auth.AccountKeeper, keyStorage *sdk.KVStoreKey, keyCode *sdk.KVStoreKey) sdk.Querier {
 	return func(ctx sdk.Context, path []string, req abci.RequestQuery) ([]byte, sdk.Error) {
 		switch path[0] {

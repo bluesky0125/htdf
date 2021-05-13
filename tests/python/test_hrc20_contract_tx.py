@@ -75,7 +75,7 @@ def test_create_hrc20_token_contract(conftest_args):
 
     tv = tx['tx']['value']
     assert len(tv['msg']) == 1
-    assert tv['msg'][0]['type'] == 'htdfservice/send'
+    assert tv['msg'][0]['type'] == 'sscqservice/send'
     assert int(tv['fee']['gas_wanted']) == gas_wanted
     assert int(tv['fee']['gas_price']) == gas_price
     assert tv['memo'] == memo

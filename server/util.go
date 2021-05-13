@@ -105,7 +105,7 @@ func interceptLoadConfig() (conf *cfg.Config, err error) {
 		conf, err = tcmd.ParseConfig() // NOTE: ParseConfig() creates dir/files as necessary.
 	}
 
-	// create a default htdfservice config file if it does not exist
+	// create a default sscqservice config file if it does not exist
 	HtdfServiceConfigFilePath := filepath.Join(rootDir, "config/hsd.toml")
 	if _, err := os.Stat(HtdfServiceConfigFilePath); os.IsNotExist(err) {
 		HtdfServiceConf, _ := config.ParseConfig()

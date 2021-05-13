@@ -58,7 +58,7 @@ func main() {
 
 	rootCmd := &cobra.Command{
 		Use:   "hsinfo",
-		Short: "htdfservice information",
+		Short: "sscqservice information",
 	}
 
 	executor := Executor{rootCmd, os.Exit}

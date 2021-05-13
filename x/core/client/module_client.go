@@ -2,7 +2,7 @@ package client
 
 import (
 	"github.com/deep2chain/htdf/client"
-	htdfservicecmd "github.com/deep2chain/htdf/x/core/client/cli"
+	sscqservicecmd "github.com/deep2chain/htdf/x/core/client/cli"
 	"github.com/spf13/cobra"
 	amino "github.com/tendermint/go-amino"
 )
@@ -19,10 +19,10 @@ func NewModuleClient(storeKey string, cdc *amino.Codec) ModuleClient {
 
 // GetQueryCmd returns the cli query commands for this module
 func (mc ModuleClient) GetQueryCmd() *cobra.Command {
-	// Group htdfservice queries under a subcommand
+	// Group sscqservice queries under a subcommand
 	htdfsvcQueryCmd := &cobra.Command{
 		Use:   "hs",
-		Short: "Querying commands for the htdfservice module",
+		Short: "Querying commands for the sscqservice module",
 	}
 
 	htdfsvcQueryCmd.AddCommand(client.GetCommands()...)
@@ -38,12 +38,12 @@ func (mc ModuleClient) GetTxCmd() *cobra.Command {
 	}
 
 	htdfsvcTxCmd.AddCommand(client.PostCommands(
-		//htdfservicecmd.GetCmdAdd(mc.cdc),
-		//htdfservicecmd.GetCmdIssue(mc.cdc),
-		htdfservicecmd.GetCmdSend(mc.cdc),
-		htdfservicecmd.GetCmdCreate(mc.cdc),
-		htdfservicecmd.GetCmdSign(mc.cdc),
-		htdfservicecmd.GetCmdBroadCast(mc.cdc),
+		//sscqservicecmd.GetCmdAdd(mc.cdc),
+		//sscqservicecmd.GetCmdIssue(mc.cdc),
+		sscqservicecmd.GetCmdSend(mc.cdc),
+		sscqservicecmd.GetCmdCreate(mc.cdc),
+		sscqservicecmd.GetCmdSign(mc.cdc),
+		sscqservicecmd.GetCmdBroadCast(mc.cdc),
 	)...)
 
 	return htdfsvcTxCmd

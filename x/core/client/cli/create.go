@@ -11,7 +11,7 @@ import (
 	sdk "github.com/deep2chain/htdf/types"
 	"github.com/deep2chain/htdf/x/auth"
 	authtxb "github.com/deep2chain/htdf/x/auth/client/txbuilder"
-	htdfservice "github.com/deep2chain/htdf/x/core"
+	sscqservice "github.com/deep2chain/htdf/x/core"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -50,14 +50,14 @@ func GetCmdCreate(cdc *codec.Codec) *cobra.Command {
 				return err
 			}
 
-			encodeflag := viper.GetBool(htdfservice.FlagEncode)
+			encodeflag := viper.GetBool(sscqservice.FlagEncode)
 
-			msg := htdfservice.NewMsgSendDefault(fromaddr, toaddr, coins)
+			msg := sscqservice.NewMsgSendDefault(fromaddr, toaddr, coins)
 
 			return PrintUnsignedStdTx(txBldr, cliCtx, []sdk.Msg{msg}, encodeflag)
 		},
 	}
-	cmd.Flags().Bool(htdfservice.FlagEncode, true, "encode enabled")
+	cmd.Flags().Bool(sscqservice.FlagEncode, true, "encode enabled")
 	return client.PostCommands(cmd)[0]
 }
 
@@ -89,7 +89,7 @@ func PrintUnsignedStdTx(txBldr authtxb.TxBuilder, cliCtx context.CLIContext, msg
 	if !encodeflag {
 		fmt.Fprintf(cliCtx.Output, "%s\n", json)
 	} else {
-		encoded := htdfservice.Encode_Hex(json)
+		encoded := sscqservice.Encode_Hex(json)
 		fmt.Fprintf(cliCtx.Output, "%s\n", encoded)
 	}
 

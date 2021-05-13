@@ -49,7 +49,7 @@ func init() {
 // Check if EVM Tx exists
 func ExistsMsgSend(tx sdk.Tx) bool {
 	for _, msg := range tx.GetMsgs() {
-		if msg.Route() == "htdfservice" {
+		if msg.Route() == "sscqservice" {
 			return true
 		}
 	}
@@ -109,7 +109,7 @@ func NewAnteHandler(ak AccountKeeper, fck FeeCollectionKeeper) sdk.AnteHandler {
 		// conventional gas metering isn't necessary anymore
 		// evm will replace it.
 		// junying-todo, 2019-10-24
-		// this is enabled again in order to handle non-htdfservice txs.
+		// this is enabled again in order to handle non-sscqservice txs.
 		defer func() {
 			if r := recover(); r != nil {
 				switch rType := r.(type) {
@@ -143,7 +143,7 @@ func NewAnteHandler(ak AccountKeeper, fck FeeCollectionKeeper) sdk.AnteHandler {
 		// conventional gas consuming isn't necessary anymore
 		// evm will replace it.
 		// junying-todo, 2019-10-24
-		// this is enabled again in order to handle non-htdfservice txs.
+		// this is enabled again in order to handle non-sscqservice txs.
 		// junying-todo, 2019-11-13
 		// GasMetering Disabled, Now Constant Gas used for Staking Txs
 		if !ExistsMsgSend(tx) {
@@ -167,7 +167,7 @@ func NewAnteHandler(ak AccountKeeper, fck FeeCollectionKeeper) sdk.AnteHandler {
 		}
 
 		// junying-todo, 2019-11-19
-		// Deduct(DefaultMsgGas * len(Msgs)) for non-htdfservice msgs
+		// Deduct(DefaultMsgGas * len(Msgs)) for non-sscqservice msgs
 		fExistsMsgSend := ExistsMsgSend(tx)
 		var retGasWanted uint64 = stdTx.Fee.GasWanted
 
@@ -180,7 +180,7 @@ func NewAnteHandler(ak AccountKeeper, fck FeeCollectionKeeper) sdk.AnteHandler {
 			}
 			fck.AddCollectedFees(newCtx, estimatedFee.Amount())
 		} else if fExistsMsgSend && !isGenesis {
-			// only for htdfservice/MsgSend
+			// only for sscqservice/MsgSend
 			// by yqq 2020-11-16
 			// to fix issue #6
 			// only check account's balance whether is enough for fee, NOT modify account's balance
@@ -194,7 +194,7 @@ func NewAnteHandler(ak AccountKeeper, fck FeeCollectionKeeper) sdk.AnteHandler {
 				return newCtx, res, true
 			}
 
-			// NOTE: htdfservice SendMsg, only inlucde one SendMsg in a Tx
+			// NOTE: sscqservice SendMsg, only inlucde one SendMsg in a Tx
 			if msgs := stdTx.GetMsgs(); len(msgs) == 1 && GetMsgSendDataHandler != nil {
 				if data, err := GetMsgSendDataHandler(msgs[0]); err != nil {
 					// ONLY log error msg , then continue

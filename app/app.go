@@ -53,7 +53,7 @@ const (
 
 	appPrometheusNamespace = "htdf"
 	//
-	RouterKey = "htdfservice"
+	RouterKey = "sscqservice"
 	// DefaultKeyPass contains the default key password for genesis transactions
 	DefaultKeyPass = "12345678"
 

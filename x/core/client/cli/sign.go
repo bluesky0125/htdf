@@ -10,7 +10,7 @@ import (
 	sdk "github.com/deep2chain/htdf/types"
 	"github.com/deep2chain/htdf/x/auth"
 	authtxb "github.com/deep2chain/htdf/x/auth/client/txbuilder"
-	htdfservice "github.com/deep2chain/htdf/x/core"
+	sscqservice "github.com/deep2chain/htdf/x/core"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"github.com/deep2chain/htdf/client/keys"
@@ -34,7 +34,7 @@ func GetCmdSign(cdc *codec.Codec) *cobra.Command {
 			cliCtx := context.NewCLIContext().WithCodec(cdc).WithAccountDecoder(cdc)
 
 			// load sign tx from string
-			stdTx, err := htdfservice.ReadStdTxFromRawData(cliCtx.Codec, args[0])
+			stdTx, err := sscqservice.ReadStdTxFromRawData(cliCtx.Codec, args[0])
 			if err != nil {
 				return err
 			}
@@ -49,7 +49,7 @@ func GetCmdSign(cdc *codec.Codec) *cobra.Command {
 				return err
 			}
 
-			offlineflag := viper.GetBool(htdfservice.FlagOffline)
+			offlineflag := viper.GetBool(sscqservice.FlagOffline)
 
 			// sign
 			res, err := SignTransaction(authtxb.NewTxBuilderFromCLI(), cliCtx, stdTx, passphrase, offlineflag)
@@ -58,17 +58,17 @@ func GetCmdSign(cdc *codec.Codec) *cobra.Command {
 			}
 
 			// print
-			encodeflag := viper.GetBool(htdfservice.FlagEncode)
+			encodeflag := viper.GetBool(sscqservice.FlagEncode)
 			if !encodeflag {
 				fmt.Printf("%s\n", res)
 			} else {
-				fmt.Printf("%s\n", htdfservice.Encode_Hex(res))
+				fmt.Printf("%s\n", sscqservice.Encode_Hex(res))
 			}
 			return nil
 		},
 	}
-	cmd.Flags().Bool(htdfservice.FlagEncode, true, "encode enabled")
-	cmd.Flags().Bool(htdfservice.FlagOffline, false, "offline disabled")
+	cmd.Flags().Bool(sscqservice.FlagEncode, true, "encode enabled")
+	cmd.Flags().Bool(sscqservice.FlagOffline, false, "offline disabled")
 	return client.PostCommands(cmd)[0]
 }
 

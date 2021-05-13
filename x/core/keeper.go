@@ -1,7 +1,7 @@
-package htdfservice
+package sscqservice
 
 const (
-	QuerierRoute = "htdfservice"
+	QuerierRoute = "sscqservice"
 )
 
 // import (
@@ -11,7 +11,7 @@ const (
 // 	"github.com/deep2chain/htdf/x/params"
 // )
 
-// // keeper of the htdfservice store
+// // keeper of the sscqservice store
 // type Keeper struct {
 // 	storeKey            sdk.StoreKey
 // 	cdc                 *codec.Codec

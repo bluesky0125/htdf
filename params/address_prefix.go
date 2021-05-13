@@ -4,10 +4,10 @@ const (
 	storeAcc = "acc"
 	storeHS  = "hs"
 
-	Bech32PrefixAccAddr  = "htdf"
-	Bech32PrefixAccPub   = "htdfpub"
-	Bech32PrefixValAddr  = "htdfvaloper"
-	Bech32PrefixValPub   = "htdfvaloperpub"
-	Bech32PrefixConsAddr = "htdfvalcons"
-	Bech32PrefixConsPub  = "htdfvalconspub"
+	Bech32PrefixAccAddr  = "sscq"
+	Bech32PrefixAccPub   = "sscqpub"
+	Bech32PrefixValAddr  = "sscqvaloper"
+	Bech32PrefixValPub   = "sscqvaloperpub"
+	Bech32PrefixConsAddr = "sscqvalcons"
+	Bech32PrefixConsPub  = "sscqvalconspub"
 )

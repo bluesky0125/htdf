@@ -523,7 +523,7 @@ curl -X GET "http://localhost:1317/txs/02A61744D89A14E9C01C9B08B74EFADD6FE9DB9A6
 		"value": {
 			"msg": [
 				{
-					"type": "htdfservice/send",
+					"type": "sscqservice/send",
 					"value": {
 						"From": "htdf14yz30q7fqkvkks3wnmdm3sxkafugguevul44ga",
 						"To": "htdf1h290f6kfjwjexudqtp7hujm52c86mf8q5vush5",

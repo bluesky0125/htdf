@@ -734,7 +734,7 @@ func (app *BaseApp) getContextForTx(mode runTxMode, txBytes []byte) (ctx sdk.Con
 
 // Check if the msg is MsgSend
 func IsMsgSend(msg sdk.Msg) bool {
-	if msg.Route() == "htdfservice" {
+	if msg.Route() == "sscqservice" {
 		return true
 	}
 	return false
@@ -858,22 +858,22 @@ func (app *BaseApp) ValidateTx(ctx sdk.Context, txBytes []byte, tx sdk.Tx) sdk.E
 	// }
 
 	// Msgs Check
-	// All htdfservice Msgs: OK
-	// All non-htdfservice Msgs: OK
-	// htdfservice Msg(s) + non-htdfservice Msg(s): No
-	// htdfservice Msg: OK, Msgs: No?
+	// All sscqservice Msgs: OK
+	// All non-sscqservice Msgs: OK
+	// sscqservice Msg(s) + non-sscqservice Msg(s): No
+	// sscqservice Msg: OK, Msgs: No?
 	var count = 0
 	for _, msg := range msgs {
-		if msg.Route() == "htdfservice" {
+		if msg.Route() == "sscqservice" {
 			count = count + 1
 		}
 	}
 	if count > 0 && len(msgs) != count {
-		return sdk.ErrInternal("mixed type of htdfservice msgs & non-htdfservice msgs can't be used")
+		return sdk.ErrInternal("mixed type of sscqservice msgs & non-sscqservice msgs can't be used")
 	}
-	// htdfservice Msgs: No
+	// sscqservice Msgs: No
 	// if count > 1 {
-	// 	return sdk.ErrInternal("the number of htdfservice can't be more than one")
+	// 	return sdk.ErrInternal("the number of sscqservice can't be more than one")
 	// }
 	return nil
 }

@@ -7,7 +7,7 @@ import (
 	"github.com/deep2chain/htdf/client/context"
 	"github.com/deep2chain/htdf/codec"
 	sdk "github.com/deep2chain/htdf/types"
-	htdfservice "github.com/deep2chain/htdf/x/core"
+	sscqservice "github.com/deep2chain/htdf/x/core"
 	"github.com/spf13/cobra"
 )
 
@@ -28,11 +28,11 @@ func GetCmdCall(cdc *codec.Codec) *cobra.Command {
 			}
 			callcode := args[1]
 			//
-			bz, err := cliCtx.Codec.MarshalJSON(htdfservice.NewQueryContractParams(contractaddr, callcode))
+			bz, err := cliCtx.Codec.MarshalJSON(sscqservice.NewQueryContractParams(contractaddr, callcode))
 			if err != nil {
 				return err
 			}
-			route := fmt.Sprintf("custom/%s/%s", htdfservice.QuerierRoute, htdfservice.QueryContract)
+			route := fmt.Sprintf("custom/%s/%s", sscqservice.QuerierRoute, sscqservice.QueryContract)
 			res, err := cliCtx.QueryWithData(route, bz)
 			if err != nil {
 				return err

@@ -61,17 +61,17 @@ func (tx StdTx) ValidateFee() sdk.Error {
 		if err != nil {
 			return err
 		}
-		if msg.Route() == "htdfservice" {
+		if msg.Route() == "sscqservice" {
 			count = count + 1
 		}
 	}
 	// only MsgSends or only OtherTypes in a Tx
 	if count > 0 && count != len(msgs) {
-		return sdk.ErrUnknownRequest("can't mix htdfservice msg with other-type msgs in a Tx")
+		return sdk.ErrUnknownRequest("can't mix sscqservice msg with other-type msgs in a Tx")
 	}
 	// one MsgSend in one Tx
 	if count > 1 {
-		return sdk.ErrUnknownRequest("can't include more than one htdfservice msgs in a Tx")
+		return sdk.ErrUnknownRequest("can't include more than one sscqservice msgs in a Tx")
 	}
 
 	// Checking minimum gaswanted condition for transactions

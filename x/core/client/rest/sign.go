@@ -12,7 +12,7 @@ import (
 	"github.com/deep2chain/htdf/types/rest"
 	"github.com/deep2chain/htdf/x/auth"
 	authtxb "github.com/deep2chain/htdf/x/auth/client/txbuilder"
-	htdfservice "github.com/deep2chain/htdf/x/core"
+	sscqservice "github.com/deep2chain/htdf/x/core"
 	hscorecli "github.com/deep2chain/htdf/x/core/client/cli"
 )
 
@@ -100,7 +100,7 @@ func SignTxRawRequestHandlerFn(cdc *codec.Codec, cliCtx context.CLIContext) http
 		}
 
 		// load sign tx from string
-		stdTx, err := htdfservice.ReadStdTxFromRawData(cliCtx.Codec, req.Tx)
+		stdTx, err := sscqservice.ReadStdTxFromRawData(cliCtx.Codec, req.Tx)
 		if err != nil {
 			rest.WriteErrorResponse(w, http.StatusBadRequest, "transaction decode failed")
 			return
@@ -122,7 +122,7 @@ func SignTxRawRequestHandlerFn(cdc *codec.Codec, cliCtx context.CLIContext) http
 		if !req.Encode {
 			w.Write(res)
 		} else {
-			w.Write([]byte(htdfservice.Encode_Hex(res)))
+			w.Write([]byte(sscqservice.Encode_Hex(res)))
 		}
 	}
 }
